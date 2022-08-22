@@ -5,11 +5,27 @@ description: A minimal example of using markdown with fastpages.
 categories: [markdown]
 title: Grace's Markdown Post
 ---
-# Grace's Markdown Post
+# Grace's First Markdown Post 🤪
 
-## Formatting Tips
-
+## Font Tips
 - *italics*
 - **bold**
 - `code font text`
-- [links](https://github.com/gwang1224/repository_1)
+- create [links](https://github.com/gwang1224/repository_1)
+- lists
+    1. item 1
+    2. item 2
+
+
+
+## Notes
+- Markdown file format: 
+    - `YEAR-MONTH-DAY-filename.md`
+- include Python code
+
+```python
+# Prints 'Hello'
+print("Hello")
+```
+
+    Hello
