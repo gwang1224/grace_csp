@@ -8,10 +8,10 @@ title: Grace's Notebook
 
 ### My Schedule 🤩
 
-**Monday, Tuesday, Thursday**
+#### Monday, Tuesday, Thursday
 
 | Class | Start Time | End Time |
-|-|-|-|
+|---|---|---|
 | AP Physics C: Mechanics | 8:35 | 9:44 |
 | AP Calculus BC | 9:49 | 10:58 |
 | Break | 10:58 | 11:08 |
@@ -22,10 +22,10 @@ title: Grace's Notebook
 | AP US History | 2:36 | 3:45 |
 
 
-**Wednesday** 
+#### Wednesday 
 
 | Class | Start Time | End Time |
-|-|-|-|
+|---|---|---|
 | AP Physics C: Mechanics | 9:55 | 10:53 |
 | AP Calculus BC | 10:58 | 11:56 |
 | Break | 11:56 | 12:06 |
@@ -35,10 +35,10 @@ title: Grace's Notebook
 | AP US History | 2:47 | 3:45 |
 
 
-**Friday** 
+#### Friday 
 
 | Class | Start Time | End Time |
-|-|-|-|
+|---|---|---|
 | AP Physics C: Mechanics | 8:35 | 9:49 |
 | AP Calculus BC | 9:54 | 11:08 |
 | Break | 11:08 | 11:18 |
