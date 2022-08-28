@@ -61,6 +61,7 @@ key: value
 ```
 
 Cool Tables
+
 | I | like |
 |-|-|
 | tables | :) |
