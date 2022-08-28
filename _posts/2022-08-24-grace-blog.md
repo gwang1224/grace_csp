@@ -54,16 +54,18 @@ title: Grace's Notebook
 
 ## AP Calculus
 
-[AP Calculus BC Calendar](/repository_1/_word/calc-bc-cal.docx)
+[AP Calculus BC Calendar](/repository_1/_word/2022-08-28-calc-cal.docx)
 
 ## AP English Language
 
-[AP English Language](https://poway.instructure.com/courses/126732/pages/august-2022)
+[AP English Language Calendar](https://poway.instructure.com/courses/126732/pages/august-2022)
+
 [MLA Format](https://docs.google.com/document/d/1tScDv26uEiIZ3Uim8VmhuTIma1dLH2BVOvbusQ_WbZA/edit)
 
 ## AP Comp Sci P
 
 [AP Computer Science Notes](/repository_1/_pages/notes.md)
+
 [Link to GitHub](https://github.com/)
 
 ## AP US History
