@@ -9,6 +9,7 @@ title: Grace's Notebook
 ### My Schedule 🤩
 
 **Monday, Tuesday, Thursday**
+
 | Class | Start Time | End Time |
 |-|-|-|
 | AP Physics C: Mechanics | 8:35 | 9:44 |
@@ -20,7 +21,9 @@ title: Grace's Notebook
 | Office Hours | 2:06 | 2:31 |
 | AP US History | 2:36 | 3:45 |
 
-**Wednesday** 😊
+
+**Wednesday** 
+
 | Class | Start Time | End Time |
 |-|-|-|
 | AP Physics C: Mechanics | 9:55 | 10:53 |
@@ -31,7 +34,9 @@ title: Grace's Notebook
 | AP Computer Science Principles | 1:44 | 2:42 |
 | AP US History | 2:47 | 3:45 |
 
-**Friday** 😔
+
+**Friday** 
+
 | Class | Start Time | End Time |
 |-|-|-|
 | AP Physics C: Mechanics | 8:35 | 9:49 |
