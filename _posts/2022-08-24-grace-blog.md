@@ -6,9 +6,9 @@ categories: [markdown]
 title: Grace's Notebook
 ---
 
-### My Schedule 🤩
+## My Schedule 🤩
 
-#### Monday, Tuesday, Thursday
+### Monday, Tuesday, Thursday
 
 | Class | Start Time | End Time |
 |---|---|---|
@@ -22,7 +22,7 @@ title: Grace's Notebook
 | AP US History | 2:36 | 3:45 |
 
 
-#### Wednesday 
+### Wednesday 
 
 | Class | Start Time | End Time |
 |---|---|---|
@@ -35,7 +35,7 @@ title: Grace's Notebook
 | AP US History | 2:47 | 3:45 |
 
 
-#### Friday 
+### Friday 
 
 | Class | Start Time | End Time |
 |---|---|---|
@@ -47,12 +47,30 @@ title: Grace's Notebook
 | AP Computer Science Principles | 1:12 | 2:26 |
 | AP US History | 2:31 | 3:45 |
 
-- "ls" lists computer files in Unix and Unix-like operating systems
-- "cd" offers way to navigate and change working directory
-- "pwd" print working directory
-- "echo" used to display line of text/string that are passed as an argument
-- "cat" reads data from the file and gives its content as output
-- "env" show setting for your shell
-- "git clone" sets up a director of files
-- "cd $project" allows user to move inside that directory of files
-- ".git" is a hidden directory that is used by git to establish relationship between machine and the git server on GitHub. 
+
+## AP Physics
+
+[AP Physics Calendar](https://poway.instructure.com/courses/126256)
+
+## AP Calculus
+
+[AP Calculus BC Calendar](/repository_1/_word/calc-bc-cal.docx)
+
+## AP English Language
+
+[AP English Language](https://poway.instructure.com/courses/126732/pages/august-2022)
+[MLA Format](https://docs.google.com/document/d/1tScDv26uEiIZ3Uim8VmhuTIma1dLH2BVOvbusQ_WbZA/edit)
+
+## AP Comp Sci P
+
+[AP Computer Science Notes](/repository_1/_pages/notes.md)
+[Link to GitHub](https://github.com/)
+
+## AP US History
+
+[AP US History](https://poway.instructure.com/courses/126524/pages/weekly-schedule)
+
+## My Life 🤪
+
+### 8/26/2022
+I woke up late and my mom yelled at me. I got to school and did a physics lab. Then I went to Calculus BC and got yelled at by my math teacher for being too slow and not being ready at the start of class (even though the bell didn't ring yet 🙄). Then I also got scolded for being an "independent contractor". We had extra time at the end of class but I didn't bring my math paper to do homework so I sat there for 20 minutes and contemplated my life choices. Rest of the day was fine. I went Starbucks after school and did some homework. Then I went to Sprouts and bought some sushi and found my dad. My friend and I went to my house and ate our sushi then went to the football game. I'm not a big football fan but its fun to watch. However, these pesky freshmen and sophomores were pushing and spraying silly string everywhere and being annoying. Some junior wacked two sophomores with a spiky bouncy ball and it was really funny. We left and went to Target because we were getting bored. My ankles and knees hurt but it was fun :)
