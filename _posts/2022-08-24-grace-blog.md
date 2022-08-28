@@ -1,12 +1,10 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: Grace's rant about life and other important stuff
 categories: [markdown]
 title: Grace's Notebook
 ---
-
-# Grace's Notebook
 
 ### My Schedule 🤩
 
