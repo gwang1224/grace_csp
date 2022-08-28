@@ -47,4 +47,12 @@ title: Grace's Notebook
 | AP Computer Science Principles | 1:12 | 2:26 |
 | AP US History | 2:31 | 3:45 |
 
-
+- "ls" lists computer files in Unix and Unix-like operating systems
+- "cd" offers way to navigate and change working directory
+- "pwd" print working directory
+- "echo" used to display line of text/string that are passed as an argument
+- "cat" reads data from the file and gives its content as output
+- "env" show setting for your shell
+- "git clone" sets up a director of files
+- "cd $project" allows user to move inside that directory of files
+- ".git" is a hidden directory that is used by git to establish relationship between machine and the git server on GitHub. 
