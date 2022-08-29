@@ -80,3 +80,6 @@ I woke up late and my mom got mad at me. I got to school and did a physics lab. 
 
 ### Sunday 8/28/2022
 I had a nightmare last night and woke up crying. However, my memory was completely wiped of my nightmare so I was crying in the middle of the night for no reason. I passed out right after and woke up this morning very confused. I should see a therapist.
+
+### Monday 8/29/2022
+I went to math class and we only did two problems today. And I did them both wrong 😭. I have a test on Thursday. 
