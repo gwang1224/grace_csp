@@ -16,6 +16,7 @@ title: Grace's APCSP Notes
 ## Vocab
 | Term | Definition |
 | --- | --- |
+| Front Matter | metadata that can turn on/off options in  Notebook |
 
 
 ## Commands
