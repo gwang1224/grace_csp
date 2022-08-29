@@ -4,6 +4,7 @@ layout: post
 description: Grace's rant about life and other important stuff
 categories: [markdown]
 title: Grace's Notebook
+comments: true
 ---
 
 ## My Schedule 🤩
