@@ -1,4 +1,4 @@
-name: 'fastpages: Grace's Blog :)'
+name: 'fastpages: Grace Blog :)'
 description: Converts Jupyter notebooks and Word docs into Jekyll blog posts.
 author: Hamel Husain
 inputs:
