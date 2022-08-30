@@ -7,6 +7,8 @@ title: Grace's APCSP Notes
 image: image/code.png
 ---
 
+
+
 ## Fastpages
 1. _notebooks: .ipynb files
 2. _post: .md files
@@ -33,3 +35,7 @@ image: image/code.png
 | env | shows setting for cell |
 | git clone | sets up a director of files |
 | cd $project | moves inside that directory of files |
+
+
+## Others
+[Alumni Notes](/repository_1/_posts/2022-08-29-alumni-meeting.md)
