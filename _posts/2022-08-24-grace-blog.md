@@ -88,4 +88,4 @@ I had a nightmare last night and woke up crying. However, my memory was complete
 I went to math class and we only did two problems today. And I did them both wrong 😭. I have a test on Thursday. 
 
 ### Tuesday 8/30/2022
-I'm scared of my math teacher.
+I'm scared of my math teacher :(
