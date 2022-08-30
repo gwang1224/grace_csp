@@ -15,6 +15,7 @@ image: image/code.png
 
 
 ## Vocab
+
 | Term | Definition |
 | --- | --- |
 | Front Matter | metadata that can turn on/off options in  Notebook |
