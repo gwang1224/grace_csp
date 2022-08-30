@@ -5,7 +5,6 @@ description: Notes from 8/29/2022 Alumni Meeting
 categories: [markdown]
 title: 8/29 Alumni Meeting Notes
 comments: true
-image: image/code.png
 ---
 
 ## Question 1: How did you realize what you want to major in?
