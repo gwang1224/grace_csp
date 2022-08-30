@@ -4,7 +4,7 @@ layout: post
 description: A minimal example of using markdown with fastpages.
 categories: [markdown]
 title: Markdown Post Tips
-image: image/code.png
+image: images/code.png
 
 ---
 # Grace's First Markdown Post 🤪
