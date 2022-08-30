@@ -21,6 +21,9 @@ image: images/code.png
 | Term | Definition |
 | --- | --- |
 | Front Matter | metadata that can turn on/off options in  Notebook |
+| string | "blah" |
+| list | ["blah", "blah", "blah"] |
+| dictionary | { "name": "Grace", "age":}
 
 
 ## Commands
