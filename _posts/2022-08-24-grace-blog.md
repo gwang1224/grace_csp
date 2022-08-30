@@ -5,6 +5,7 @@ description: Grace's rant about life and other important stuff
 categories: [markdown]
 title: Grace's Notebook
 comments: true
+image: image/note.png
 ---
 
 ## My Schedule 🤩
