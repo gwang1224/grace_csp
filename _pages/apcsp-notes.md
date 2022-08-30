@@ -4,6 +4,7 @@ layout: post
 description: APCSP Notes
 categories: [markdown]
 title: Grace's APCSP Notes
+image: image/code.png
 ---
 
 ## Fastpages
