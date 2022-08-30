@@ -70,6 +70,8 @@ image: image/note.png
 
 [Link to GitHub](https://github.com/)
 
+[8/29 Alumni Panel Notes](/repository_1/_posts/2022-08-29-alumni-meeting.md)
+
 ## AP US History
 
 [AP US History](https://poway.instructure.com/courses/126524/pages/weekly-schedule)
