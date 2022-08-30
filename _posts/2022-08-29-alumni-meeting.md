@@ -30,21 +30,21 @@ comments: true
 6. Don’t cut corners and do the work
     -  It'll be better for you in the long run
 
-## Are there any PBL scenarios is college CS classes?
+## Question 3: Are there any PBL scenarios is college CS classes?
 
 Note: PBL = Project-Based Learning
 1. College is a mix of PBL and tests
 2. Studying in groups is helpful
 
 
-## How have you applied CS in your major if you are not majoring in CS?
+## Question 4: How have you applied CS in your major if you are not majoring in CS?
 
 1. Word doc → spreadsheet
 2. Copy-pasting
 3. Matlab
 4. Coding is helpful for analysis
 
-## What internships/jobs did the alumni have?
+## Question 5: What internships/jobs did the alumni have?
 
 1. Northrop Grumman
 2. LG
