@@ -23,7 +23,7 @@ image: images/code.png
 | Front Matter | metadata that can turn on/off options in  Notebook |
 | string | "blah" |
 | list | ["blah", "blah", "blah"] |
-| dictionary | { "name": "Grace", "age":}
+| dictionary | info_dict = { "name": "Grace", "age": 16, "Grade": "Junior"} |
 
 
 ## Commands
