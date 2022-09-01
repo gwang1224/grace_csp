@@ -89,3 +89,11 @@ I went to math class and we only did two problems today. And I did them both wro
 
 ### Tuesday 8/30/2022
 I'm scared of my math teacher :(
+
+### Wednesday 8/31/2022
+I think I failed my APEL on demand !!! Lol.
+
+To Do
+- dark mode
+- change colors
+- make pictures in html

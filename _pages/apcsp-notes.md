@@ -42,3 +42,7 @@ image: images/code.png
 
 ## Others
 [Alumni Notes](/repository_1/_posts/2022-08-29-alumni-meeting.md)
+
+procedural abstraction
+data abstraction
+html fragment
