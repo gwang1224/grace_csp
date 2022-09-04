@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: APCSP Notes
-categories: [markdown]
+categories: [T1 CSP Notes]
 title: Grace's APCSP Notes
 image: images/code.png
 ---
