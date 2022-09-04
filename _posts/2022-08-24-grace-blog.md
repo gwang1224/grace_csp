@@ -2,53 +2,11 @@
 toc: true
 layout: post
 description: Grace's rant about life and other important stuff
-categories: [markdown]
+categories: [Trimester 1]
 title: Grace's Notebook
 comments: true
 image: images/graceblog2.png
 ---
-
-## My Schedule 🤩
-
-### Monday, Tuesday, Thursday
-
-| Class | Start Time | End Time |
-|---|---|---|
-| AP Physics C: Mechanics | 8:35 | 9:44 |
-| AP Calculus BC | 9:49 | 10:58 |
-| Break | 10:58 | 11:08 |
-| AP English Language | 11:13 | 12:52 |
-| Lunch | 12:22 | 12:52 |
-| AP Computer Science Principles | 12:57 | 2:06 |
-| Office Hours | 2:06 | 2:31 |
-| AP US History | 2:36 | 3:45 |
-
-
-### Wednesday 
-
-| Class | Start Time | End Time |
-|---|---|---|
-| AP Physics C: Mechanics | 9:55 | 10:53 |
-| AP Calculus BC | 10:58 | 11:56 |
-| Break | 11:56 | 12:06 |
-| AP English Language | 12:11 | 1:09 |
-| Lunch | 1:09 | 1:39 |
-| AP Computer Science Principles | 1:44 | 2:42 |
-| AP US History | 2:47 | 3:45 |
-
-
-### Friday 
-
-| Class | Start Time | End Time |
-|---|---|---|
-| AP Physics C: Mechanics | 8:35 | 9:49 |
-| AP Calculus BC | 9:54 | 11:08 |
-| Break | 11:08 | 11:18 |
-| AP English Language | 11:23 | 12:37 |
-| Lunch | 12:37 | 1:07 |
-| AP Computer Science Principles | 1:12 | 2:26 |
-| AP US History | 2:31 | 3:45 |
-
 
 ## AP Physics
 
@@ -92,8 +50,3 @@ I'm scared of my math teacher :(
 
 ### Wednesday 8/31/2022
 I think I failed my APEL on demand !!! Lol.
-
-To Do
-- dark mode
-- change colors
-- make pictures in html
