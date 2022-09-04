@@ -1,7 +1,7 @@
-$high-emph: rgba(white, 0.87);
-$med-emph: rgba(white, 0.69);
-$low-emph: rgba(white, 0.38);
-$dark-grey : #425454; 
+$high-emph: rgba(white);
+$med-emph: rgba(white);
+$low-emph: rgba(white);
+$dark-grey : rgb(253, 240, 213); 
 // $dark-grey : #1F1B24;
 $overlay: mix($dark-grey, white, 95%);
 $overlay-light: mix($dark-grey, white, 86%);
@@ -12,7 +12,7 @@ html, body, input, textarea, select, button {
 }
 
 a {
-    color: rgb(253, 240, 213) !important;
+    color: rgb(77, 107, 82) !important;
 }
 
 a:hover {
