@@ -12,7 +12,7 @@ image: images/code.png
     <th>Week</th>
     <th>Link to Review Check</th>
     <th>Progress Check</th>
-  </th>
+  </tr>
 
   <tr>
     <th>Week 0: Tools and Equipment</th>
