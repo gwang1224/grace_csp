@@ -16,26 +16,26 @@ image: images/code.png
 
   <tr>
     <th>Week 0: Tools and Equipment</th>
-    <th><a href="https://github.com/gwang1224/repository_1/issues/2"></a></th>
+    <th><a href="https://github.com/gwang1224/repository_1/issues/2">Review Ticket</a></th>
     <th>
-      <ol>
-        <li>Downloaded all tools and equipment needed for this class</li>
-            <ul>
-                <li>Anaconda</li>
-                <li>Python 3</li>
-                <li>VSCode</li>
-            </ul>
-        <li>Learned about inputs and outputs</li>
-        <li>Learned how to use markdown posts and customized my fastpages</li>
-        <li>Learned Python Linux commands</li>
-        <li>Created a jupyter notebook printing "Hello World"</li>
-      </ol>
+        <ol>
+            <li>Downloaded all tools and equipment needed for this class</li>
+                <ul>
+                    <li>Anaconda</li>
+                    <li>Python 3</li>
+                    <li>VSCode</li>
+                </ul>
+            <li>Learned about inputs and outputs</li>
+            <li>Learned how to use markdown posts and customized my fastpages</li>
+            <li>Learned Python Linux commands</li>
+            <li>Created a jupyter notebook printing "Hello World"</li>
+        </ol>
     </th>
   </tr>
 
   <tr>
     <th>Week 1: Introduction to Python</th>
-    <th><a href="https://github.com/gwang1224/repository_1/issues/4"></a></th>
+    <th><a href="https://github.com/gwang1224/repository_1/issues/4">Review Ticket</a></th>
     <th>
       <ol>
         <li>Created a Python Quiz</li>
@@ -50,7 +50,7 @@ image: images/code.png
 
   <tr>
     <th>Week 2: Data Abstraction</th>
-    <th><a href="https://github.com/gwang1224/repository_1/issues/5"></a></th>
+    <th><a href="https://github.com/gwang1224/repository_1/issues/5">Review Ticket</a></th>
     <th>
       <ol>
         <li>Learned about Lists and Dictionaries</li>
