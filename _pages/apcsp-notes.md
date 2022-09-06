@@ -19,12 +19,7 @@ image: images/code.png
     <th><a href="https://github.com/gwang1224/repository_1/issues/2">Review Ticket</a></th>
     <th>
         <ol>
-            <li>Downloaded all tools and equipment needed for this class</li>
-                <ul>
-                    <li>Anaconda</li>
-                    <li>Python 3</li>
-                    <li>VSCode</li>
-                </ul>
+            <li>Downloaded all tools and equipment needed for this class: Anaconda, Python, VSCode</li>
             <li>Learned about inputs and outputs</li>
             <li>Learned how to use markdown posts and customized my fastpages</li>
             <li>Learned Python Linux commands</li>
