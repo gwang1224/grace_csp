@@ -6,10 +6,9 @@ categories: [Trimester 1]
 title: 1.1 Collaboration
 ---
 
-### Learning Objectives
+### CSP Team Collaboration
 
-CRD-1.A Explain how computing innovations are improved through collaboration
-CRD-1.C Demonstrate effective interpersonal skills during collaboration
+Think-Pair-Share: [Team collaboration](https://docs.google.com/document/d/1uJS2uJJ9kvuplerYVA6hyNfojvkbD5ugRDo8edAISAw/edit)
 
 ### Notes
 
