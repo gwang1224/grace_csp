@@ -11,7 +11,7 @@ image: images/code.png
 
 ## Setup
 
-# Heading 1 hello
+# Heading 1
 ## Heading 2
 ### Heading 3
 #### Heading 4
