@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: JavaScript
+title: JavaScript
 categories: [T1 CSP Notes]
 ---
 
