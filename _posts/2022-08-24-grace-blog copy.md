@@ -1,0 +1,64 @@
+---
+toc: true
+layout: post
+categories: [Trimester 1]
+title: Agile Methodology
+---
+
+![]({{ site.baseurl }}/images/scrumboard.png "Our Scrum Board")
+
+
+## Roles
+
+1. Scrum Master (Tanisha): help facilitate the sprint by ensuring that an agile framework is followed
+2. Frontend Developer (Claire & Amitha): A front-end developer builds the front-end portion of websites and web applications
+3. Backend Developer (ME): build and maintain the mechanisms that process data and perform actions like data storage, security, and other server-side functions that you cannot see.
+
+## Important Skills
+
+1. Creativity
+    - Conceptualize problems and solutions
+    - Display foresight
+    - Make connections
+    - Make intelligent inferences
+    - Synthesize ideas and data
+
+2. Critical thinking: Solving complex problems, emable discovert of deficiencies
+
+3. Effective Communication
+    - Weekly meetings
+
+4. Collaboration through Leadership
+    - Delegating responsibility
+    - Demonstrating effective time management
+    - Initiating new ideas
+    - Major decision-making
+    - Managing conflict
+    - Managing groups
+    - Multitasking
+    - Teaching and mentoring
+
+5. Collaboration - Teamwork
+    - Accepting responsibility
+    - Making and implementing decisions
+    - Managing time wisely
+    - Meeting both short- and long-term goals
+    - Organizing
+    - Setting and meeting deadlines
+
+6. Researching
+    - Analyzing information
+    - Brainstorming solutions
+    - Delineating needs and requirements
+    - Extracting information from data
+    - Gathering information
+    - Forecasting possible roadblocks
+    - Setting goals
+    - Solving problems
+
+7. Technical
+    - Being easy to work with
+    - Quick to learn
+    - Glad to learn
+    - Failing and always willing to try new things
+    - Willing to open new doors in case of a drastic oversight
