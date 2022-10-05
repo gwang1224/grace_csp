@@ -113,4 +113,5 @@ Note: change server name and port
 
 ![]({{ site.baseurl }}/images/flask_with_IP.png "My personal flask website is now currently running on a public IP address")
 
+![]({{ site.baseurl }}/images/group_ip.png "Group flask public IP address")
 
