@@ -7,6 +7,9 @@ title: Grace's APCSP Notes
 image: images/code.png
 ---
 
+{% include nav_frontend.html %}
+
+
 <table>
   <tr>
     <th>Week</th>
