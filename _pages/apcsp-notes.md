@@ -61,9 +61,3 @@ image: images/code.png
       </ol>
     </th>
   </tr>
-
-
-
-procedural abstraction
-data abstraction
-html fragment
