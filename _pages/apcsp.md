@@ -1,10 +1,8 @@
 ---
 toc: true
 layout: post
-description: APCSP Notes
-categories: [T1 CSP Notes]
-title: Grace's APCSP Notes
-image: images/code.png
+description: APCSP
+title: APCSP
 ---
 
 {% include nav_frontend.html %}
