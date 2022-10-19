@@ -19,14 +19,6 @@ Amitha: Frontend
 Claire: Backend
 Tanisha: Backend
 
-## Data Abstraction
-
-Grace- Chinese
-Tanisha- Spanish
-Claire-
-Amitha- French
-Data about song and artists stored in dictionary which is retrieved using API
-
 ## Managing Complexity
 
 Use a function to read user input and only provide wanted album information allowing user to use favorites tab to organize the artists they enjoy
