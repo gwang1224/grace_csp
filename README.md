@@ -6,7 +6,7 @@
 
 https://gwang1224.github.io/repository_1/
 
-# My Blog
+# Hello! Welcome to Grace's Blog!
 
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
