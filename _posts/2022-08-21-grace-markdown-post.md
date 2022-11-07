@@ -4,8 +4,6 @@ layout: post
 description: A minimal example of using markdown with fastpages.
 categories: [T1 CSP Notes]
 title: Markdown Post Tips
-image: images/code.png
-
 ---
 # Grace's First Markdown Post 🤪
 
