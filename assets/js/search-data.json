@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Trimester 1 College Board",
-            "content": ". . . The code first obtains the first index of the list using the variable j. Then it gets another variable k in order to index the other numbers in the rest of the list. The index of the list include len(myList) - 1. The second while loop repeats while changing k and comparing it to the myList(j). The while loop goes on until all the values in the list are looped through. . .",
+            "content": ". . Using Jupyter Notebook, I was able to visualize the code better with an actual output. I thought that having y = False would print “False” but if the if-statement was false, the statement would not print anything. . . The code first obtains the first index of the list using the variable j. Then it gets another variable k in order to index the other numbers in the rest of the list. The index of the list include len(myList) - 1. The second while loop repeats while changing k and comparing it to the myList(j). The while loop goes on until all the values in the list are looped through. . . Again, I used Jupyter Notebook to visualize the code. I did not realize that the thirdList had been set to firstList. Then, because secondList was set in thirdList, the secondList = firstList. .",
             "url": "https://gwang1224.github.io/repository_1/trimester%201/2022/11/08/cb_screenshot.html",
             "relUrl": "/trimester%201/2022/11/08/cb_screenshot.html",
             "date": " • Nov 8, 2022"
