@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lists, Dictionaries, Iteration | Grace’s Website</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Lists, Dictionaries, Iteration" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}." />
+<meta property="og:description" content="An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}." />
+<link rel="canonical" href="https://gwang1224.github.io/repository_1/trimester%201/2022/08/30/python_lists.html" />
+<meta property="og:url" content="https://gwang1224.github.io/repository_1/trimester%201/2022/08/30/python_lists.html" />
+<meta property="og:site_name" content="Grace’s Website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-30T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lists, Dictionaries, Iteration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-30T00:00:00-05:00","datePublished":"2022-08-30T00:00:00-05:00","description":"An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.","headline":"Lists, Dictionaries, Iteration","mainEntityOfPage":{"@type":"WebPage","@id":"https://gwang1224.github.io/repository_1/trimester%201/2022/08/30/python_lists.html"},"url":"https://gwang1224.github.io/repository_1/trimester%201/2022/08/30/python_lists.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/repository_1/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://gwang1224.github.io/repository_1/feed.xml" title="Grace's Website" /><link rel="shortcut icon" type="image/x-icon" href="/repository_1/images/gwicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/repository_1/">Grace&#39;s Website</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/repository_1/about/">About Me</a><a class="page-link" href="/repository_1/_pages/apcsp.html">APCSP</a><a class="page-link" href="/repository_1/_pages/schedule.html">Schedule</a><a class="page-link" href="/repository_1/search/">Search</a><a class="page-link" href="/repository_1/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Lists, Dictionaries, Iteration</h1><p class="page-description">An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-30T00:00:00-05:00" itemprop="datePublished">
+        Aug 30, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      9 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/repository_1/categories/#trimester 1">trimester 1</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/gwang1224/repository_1/tree/master/_notebooks/2022-08-30-python_lists.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/repository_1/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/gwang1224/repository_1/master?filepath=_notebooks%2F2022-08-30-python_lists.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/repository_1/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/gwang1224/repository_1/blob/master/_notebooks/2022-08-30-python_lists.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/repository_1/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fgwang1224%2Frepository_1%2Fblob%2Fmaster%2F_notebooks%2F2022-08-30-python_lists.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/repository_1/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Lists-and-Dictionaries">Lists and Dictionaries </a></li>
+<li class="toc-entry toc-h3"><a href="#List-and-Dictionary-purpose">List and Dictionary purpose </a></li>
+<li class="toc-entry toc-h3"><a href="#Formatted-output-of-List/Dictionary---for-loop">Formatted output of List/Dictionary - for loop </a></li>
+<li class="toc-entry toc-h3"><a href="#Alternate-methods-for-iteration---while-loop">Alternate methods for iteration - while loop </a></li>
+<li class="toc-entry toc-h3"><a href="#Calling-a-function-repeatedly---recursion">Calling a function repeatedly - recursion </a></li>
+<li class="toc-entry toc-h2"><a href="#My-Own-Dictionary">My Own Dictionary </a></li>
+<li class="toc-entry toc-h2"><a href="#Python-Quiz-with-Dictionaries">Python Quiz with Dictionaries </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-30-python_lists.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Lists-and-Dictionaries">
+<a class="anchor" href="#Lists-and-Dictionaries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists and Dictionaries<a class="anchor-link" href="#Lists-and-Dictionaries"> </a>
+</h3>
+<p><mark>Variables all have a type</mark>: String, Integer, Float, List and Dictionary are some key types.  In Python, variables are given a type at assignment,  Types are important to understand and will impact operations, as we saw when we were required to user str() function in concatenation.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-output</span>
+<span class="c1"># Sample of Python Variables</span>
+
+<span class="c1"># variable of type string</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">"Grace Wang"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"name"</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+<span class="c1"># variable of type integer</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"age"</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+
+<span class="c1"># variable of type float</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"score"</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+
+<span class="c1"># variable of type list (many values in one variable)</span>
+<span class="n">langs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Java"</span><span class="p">,</span> <span class="s2">"R"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"html"</span><span class="p">,</span> <span class="s2">"linux"</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"langs"</span><span class="p">,</span> <span class="n">langs</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"- langs[0]"</span><span class="p">,</span> <span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># variable of type dictionary (a group of keys and values)</span>
+<span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">"age"</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+    <span class="s2">"score"</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span>
+    <span class="s2">"langs"</span><span class="p">:</span> <span class="n">langs</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"person"</span><span class="p">,</span> <span class="n">person</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'- person["name"]'</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>name Grace Wang &lt;class 'str'&gt;
+age 16 &lt;class 'int'&gt;
+score 100 &lt;class 'int'&gt;
+langs ['Python', 'JavaScript', 'Java', 'R', 'C', 'html', 'linux'] &lt;class 'list'&gt;
+- langs[0] Python &lt;class 'str'&gt;
+
+person {'name': 'Grace Wang', 'age': 16, 'score': 100, 'langs': ['Python', 'JavaScript', 'Java', 'R', 'C', 'html', 'linux']} &lt;class 'dict'&gt;
+- person["name"] Grace Wang &lt;class 'str'&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="List-and-Dictionary-purpose">
+<a class="anchor" href="#List-and-Dictionary-purpose" aria-hidden="true"><span class="octicon octicon-link"></span></a>List and Dictionary purpose<a class="anchor-link" href="#List-and-Dictionary-purpose"> </a>
+</h3>
+<p><mark>List and Dictionaries are used to collect information</mark>.  Mostly, when information is collected it is formed into patterns.  As that pattern is established you will collect many instances of that pattern.</p>
+<ul>
+<li>List is used to collect many</li>
+<li>Dictionary is used to define data patterns.</li>
+<li>Iteration is often used to process through lists.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-output</span>
+<span class="c1"># Define an empty List called InfoDb</span>
+<span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Mortensen"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"October 21"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"jmortensen@powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2015-Fusion"</span><span class="p">,</span> <span class="s2">"2011-Ranger"</span><span class="p">,</span> <span class="s2">"2003-Excursion"</span><span class="p">,</span> <span class="s2">"1997-F350"</span><span class="p">,</span> <span class="s2">"1969-Cadillac"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Grace"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Wang"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"September 2"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"gracewang187@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="s2">"None"</span>
+<span class="p">})</span>
+
+<span class="c1"># Print the data structure</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{'FirstName': 'John', 'LastName': 'Mortensen', 'DOB': 'October 21', 'Residence': 'San Diego', 'Email': 'jmortensen@powayusd.com', 'Owns_Cars': ['2015-Fusion', '2011-Ranger', '2003-Excursion', '1997-F350', '1969-Cadillac']}, {'FirstName': 'Grace', 'LastName': 'Wang', 'DOB': 'September 2', 'Residence': 'San Diego', 'Email': 'gracewang187@gmail.com', 'Owns_Cars': 'None'}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Formatted-output-of-List/Dictionary---for-loop">
+<a class="anchor" href="#Formatted-output-of-List/Dictionary---for-loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Formatted output of List/Dictionary - for loop<a class="anchor-link" href="#Formatted-output-of-List/Dictionary---for-loop"> </a>
+</h3>
+<p>Managing data in Lists and Dictionaries is for the convenience of passing the data across the internet or preparing it to be stored into a database.  Also, it is a great way to exchange data inside of our own programs.</p>
+<p>Next, we will take the stored data and output it within our notebook.  There are multiple steps to this process...</p>
+<ul>
+<li>
+<mark>Preparing a function to format the data</mark>, the print_data() function receives a parameter called "d_rec" short for dictionary record.  It then references different keys within [] square brackets.   </li>
+<li>
+<mark>Preparing a function to iterate through the list</mark>, the for_loop() function uses an enhanced for loop that pull record by record out of InfoDb until the list is empty.  Each time through the loop it call print_data(record), which passes the dictionary record to that function.</li>
+<li>Finally, you need to <mark>activate your function</mark> with the call to the defined function for_loop().  Functions are defined, not activated until they are called.  By placing for_loop() at the left margin the function is activated.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-output</span>
+<span class="c1"># given and index this will print InfoDb content</span>
+<span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span>  <span class="c1"># using comma puts space between values</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">])</span> <span class="c1"># \t is a tab indent</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Cars: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>  <span class="c1"># end="" make sure no return occurs</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"Owns_Cars"</span><span class="p">]))</span>  <span class="c1"># join allows printing a string list with separator</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+
+<span class="c1"># for loop iterates on length of InfoDb</span>
+<span class="k">def</span> <span class="nf">for_loop</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"For loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+
+<span class="n">for_loop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>For loop output
+
+John Mortensen
+	 Residence: San Diego
+	 Birth Day: October 21
+	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
+
+Grace Wang
+	 Residence: San Diego
+	 Birth Day: September 2
+	 Cars: N, o, n, e
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Alternate-methods-for-iteration---while-loop">
+<a class="anchor" href="#Alternate-methods-for-iteration---while-loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alternate methods for iteration - while loop<a class="anchor-link" href="#Alternate-methods-for-iteration---while-loop"> </a>
+</h3>
+<p>In coding, there are usually many ways to achieve the same result.  Defined are functions illustrating using index to reference records in a list, these methods are called a "while" loop and "recursion".</p>
+<ul>
+<li>The while_loop() function contains a while loop, "while i &lt; len(InfoDb):".  This counts through the elements in the list start at zero, and passes the record to print_data()</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-output</span>
+<span class="c1"># while loop contains an initial n and an index incrementing statement (n += 1)</span>
+<span class="k">def</span> <span class="nf">while_loop</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"While loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span>
+
+<span class="n">while_loop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>While loop output
+
+John Mortensen
+	 Residence: San Diego
+	 Birth Day: October 21
+	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
+
+Grace Wang
+	 Residence: San Diego
+	 Birth Day: September 2
+	 Cars: N, o, n, e
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Calling-a-function-repeatedly---recursion">
+<a class="anchor" href="#Calling-a-function-repeatedly---recursion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calling a function repeatedly - recursion<a class="anchor-link" href="#Calling-a-function-repeatedly---recursion"> </a>
+</h3>
+<p>This final technique achieves looping by calling itself repeatedly.</p>
+<ul>
+<li>recursive_loop(i) function is primed with the value 0 on its activation with "recursive_loop(0)"</li>
+<li>the last statement indented inside the if statement "recursive_loop(i + 1)" activates another call to the recursive_loop(i) function, each time i is increasing</li>
+<li>ultimately the "if i &lt; len(InfoDb):" will evaluate to false and the program ends</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-output</span>
+<span class="c1"># recursion simulates loop incrementing on each call (n + 1) until exit condition is met</span>
+<span class="k">def</span> <span class="nf">recursive_loop</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">recursive_loop</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Recursive loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">recursive_loop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Recursive loop output
+
+John Mortensen
+	 Residence: San Diego
+	 Birth Day: October 21
+	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
+
+Grace Wang
+	 Residence: San Diego
+	 Birth Day: September 2
+	 Cars: N, o, n, e
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="My-Own-Dictionary">
+<a class="anchor" href="#My-Own-Dictionary" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Own Dictionary<a class="anchor-link" href="#My-Own-Dictionary"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already satisfied: pandas in /opt/homebrew/lib/python3.10/site-packages (1.4.4)
+Requirement already satisfied: numpy&gt;=1.21.0 in /opt/homebrew/lib/python3.10/site-packages (from pandas) (1.23.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/homebrew/lib/python3.10/site-packages (from pandas) (2022.2.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/homebrew/lib/python3.10/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: six&gt;=1.5 in /opt/homebrew/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
+Note: you may need to restart the kernel to use updated packages.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'Dates'</span><span class="p">:</span> <span class="p">[</span><span class="s2">"8/17/22"</span><span class="p">,</span> <span class="s2">"8/18/22"</span><span class="p">,</span> <span class="s2">"8/19/22"</span><span class="p">,</span> <span class="s2">"8/20/22"</span><span class="p">,</span> <span class="s2">"8/21/22"</span><span class="p">,</span> <span class="s2">"8/22/22"</span><span class="p">,</span> <span class="s2">"8/23/22"</span><span class="p">,</span> <span class="s2">"8/24/22"</span><span class="p">,</span> <span class="s2">"8/25/22"</span><span class="p">,</span> <span class="s2">"8/26/22"</span><span class="p">,</span> <span class="s2">"8/27/22"</span><span class="p">,</span> <span class="s2">"8/28/22"</span><span class="p">,</span> <span class="s2">"8/29/22"</span><span class="p">,</span> <span class="s2">"8/30/22"</span><span class="p">,</span> <span class="s2">"8/31/22"</span><span class="p">,</span> <span class="s2">"9/1/22"</span><span class="p">,</span> <span class="s2">"9/2/22"</span><span class="p">,</span> <span class="s2">"9/3/22"</span><span class="p">,</span> <span class="s2">"9/4/22"</span><span class="p">,</span> <span class="s2">"9/5/22"</span><span class="p">],</span>
+    <span class="s1">'Hours'</span><span class="p">:</span> <span class="p">[</span><span class="mf">8.5</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">12.5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add_sleep_data</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Add a day (Enter date in MM/DD/YY format): "</span><span class="p">)</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"How many hours did you sleep? "</span><span class="p">)</span>
+    <span class="n">hours</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="c1"># print(data["Dates"])</span>
+    <span class="n">data</span><span class="p">[</span><span class="s2">"Dates"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">day</span><span class="p">)</span>
+    <span class="n">data</span><span class="p">[</span><span class="s2">"Hours"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hours</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"You added "</span> <span class="o">+</span> <span class="n">day</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="n">hours</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Here is your updated sleep data"</span><span class="p">)</span>
+    <span class="n">df_by_days</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df_by_days</span><span class="p">)</span>
+
+<span class="n">add_sleep_data</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Add a day (Enter date in MM/DD/YY format): 
+How many hours did you sleep? 
+You added 9/6/22 : 9
+Here is your updated sleep data
+      Dates Hours
+0   8/17/22   8.5
+1   8/18/22   6.5
+2   8/19/22     7
+3   8/20/22     7
+4   8/21/22     9
+5   8/22/22     7
+6   8/23/22  12.5
+7   8/24/22     8
+8   8/25/22     8
+9   8/26/22     8
+10  8/27/22   8.5
+11  8/28/22     9
+12  8/29/22     8
+13  8/30/22     8
+14  8/31/22     7
+15   9/1/22     7
+16   9/2/22     6
+17   9/3/22     8
+18   9/4/22     9
+19   9/5/22   6.5
+20   9/6/22     9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data2</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">hours</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">"Hours"</span><span class="p">]:</span>
+    <span class="n">data2</span><span class="p">[</span><span class="n">hours</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">print_hour_freq</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">freq_dict</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">freq_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+                <span class="n">freq_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">freq_dict</span><span class="p">)</span>
+
+<span class="n">print_hour_freq</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"Hours"</span><span class="p">],</span> <span class="n">data2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{8.5: 2, 6.5: 2, 7: 5, 9: 3, 12.5: 1, 8: 6, 6: 1, '9': 1}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_by_days</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_by_days</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>      Dates Hours
+0   8/17/22   8.5
+1   8/18/22   6.5
+2   8/19/22     7
+3   8/20/22     7
+4   8/21/22     9
+5   8/22/22     7
+6   8/23/22  12.5
+7   8/24/22     8
+8   8/25/22     8
+9   8/26/22     8
+10  8/27/22   8.5
+11  8/28/22     9
+12  8/29/22     8
+13  8/30/22     8
+14  8/31/22     7
+15   9/1/22     7
+16   9/2/22     6
+17   9/3/22     8
+18   9/4/22     9
+19   9/5/22   6.5
+20   9/6/22     9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_by_days</span><span class="p">[</span><span class="s1">'Hours'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_by_days</span><span class="p">[</span><span class="s1">'Hours'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">df_by_days</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Dates     object
+Hours    float64
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_by_days</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s2">"Dates"</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"Hours"</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s2">"line"</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">"pink"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;AxesSubplot:xlabel='Dates'&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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EZmK4YOIiIhMxfBBREREpmL4IKK0XH311VAUBYqioLCwEKNGjcLnP/95/P73v0csFkv7cR566CFUVlYat6FEZHsMH0SUtgsvvBAtLS3Ys2cPnn32WcydOxff+c53cNFFFyESiVi9eUSUJxg+iChtfr8fdXV1GD16NE4//XT88Ic/xF/+8hc8++yzeOihhwAA9957L2bOnImSkhI0NjbixhtvREdHBwBgy5YtuOaaa9DW1hZvRbnzzjsBAKFQCLfccgtGjx6NkpISnHXWWdiyZUv8uffu3YuFCxdixIgRKCkpwYwZM/DXv/7V5HeAiPTA8EFEOTn//PMxa9YsbNiwAQDg8Xjw85//HO+//z4efvhhvPjii/j+978PADj77LOxbt06lJeXo6WlBS0tLbjlllsAAN/61rfw2muv4Y9//CPeffddfO1rX8OFF16IHTt2AACWLl2KUCiErVu3Yvv27VizZg1KS0utedFElJO8WNuFiOxt2rRpePfddwEAy5cvj18/fvx4/PjHP8b111+PX/ziF/D5fKioqICiKKirq4vfb9++fVi/fj327duHhoYGAMAtt9yCTZs2Yf369bjnnnuwb98+LF68GDNnzgQATJw40bwXSES6YvggopwJIaAoCgDg+eefx+rVq/Gvf/0LwWAQkUgEPT096OrqQnFxccrf3759O6LRKKZOnZp0fSgUQnV1NQBg2bJluOGGG/C3v/0N8+bNw+LFi3Hqqaca+8KIyBDsdiGinH344YeYMGEC9uzZg4suuginnnoqnnrqKbz11lt44IEHAMjVNwfT0dEBr9eLt956C9u2bYt/ffjhh/jZz34GALjuuuuwa9cuXHnlldi+fTvOOOMM3Hfffaa8PiLSF8MHEeXkxRdfxPbt27F48WK89dZbiMViWLt2LT796U9j6tSpaG5uTrq/z+dDNBpNum727NmIRqNobW3F5MmTk74Su2caGxtx/fXXY8OGDbj55pvxm9/8xpTXSET6YrcLEaUtFArh4MGDiEajOHToEDZt2oTVq1fjoosuwlVXXYX33nsPvb29uO+++7Bw4UK8+uqr+OUvf5n0GOPHj0dHRwdeeOEFzJo1C8XFxZg6dSouv/xyXHXVVVi7di1mz56Nw4cP44UXXsCpp56KBQsWYPny5Zg/fz6mTp2K48eP46WXXsL06dMteieIKCeCiCgNS5YsEQAEAFFQUCBqamrEvHnzxO9//3sRjUbj97v33ntFfX29CAQC4otf/KJ45JFHBABx/Pjx+H2uv/56UV1dLQCIlStXCiGECIfD4o477hDjx48XhYWFor6+Xnz5y18W7777rhBCiG9961ti0qRJwu/3i5qaGnHllVeKI0eOmPkWEJFOFCGEsDb+EBERkZtwzAcRERGZiuGDiIiITMXwQURERKZi+CAiIiJTMXwQERGRqRg+iIiIyFQMH0RERGQqhg8iIiIyFcMHERERmYrhg4iIiEzF8EFERESm+v8XNpTIiEbyqwAAAABJRU5ErkJggg==">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-Quiz-with-Dictionaries">
+<a class="anchor" href="#Python-Quiz-with-Dictionaries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python Quiz with Dictionaries<a class="anchor-link" href="#Python-Quiz-with-Dictionaries"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">question_answer</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"What command defines a function or method?"</span><span class="p">:</span> <span class="s2">"def"</span><span class="p">,</span>
+    <span class="s2">"What conditionally executes a block of code, along with else and elif?"</span><span class="p">:</span> <span class="s2">"if statement"</span><span class="p">,</span>
+    <span class="s2">"What does a jupyter notebook end in?"</span><span class="p">:</span> <span class="s2">"ipynb"</span><span class="p">,</span>
+    <span class="s2">"What is style of programming characterized by the identification of classes of objects closely linked with the methods?"</span><span class="p">:</span> <span class="s2">"object oriented programming"</span><span class="p">,</span>
+    <span class="s2">"What is the text at the front of a markdown post called?"</span><span class="p">:</span> <span class="s2">"front matter"</span> 
+    <span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">ask_question</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
+    <span class="sd">"""Asks question and determines if """</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+    <span class="n">user_answer</span> <span class="o">=</span> <span class="n">ask_for_answer</span><span class="p">()</span>
+    <span class="n">is_answer_right</span><span class="p">(</span><span class="n">user_answer</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">ask_for_answer</span><span class="p">():</span>
+    <span class="sd">"""Asks for an input from the user and returns user answer"""</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">answer</span>
+
+<span class="k">def</span> <span class="nf">is_answer_right</span><span class="p">(</span><span class="n">user_answer</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
+    <span class="sd">"""Inputs user answer and actual answer and adds to score if answer is right"""</span>
+    <span class="k">global</span> <span class="n">score</span>
+    <span class="k">if</span> <span class="n">user_answer</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Good job! The answer is </span><span class="si">{</span><span class="n">answer</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Sorry, incorrect 😢. The right answer was </span><span class="si">{</span><span class="n">answer</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Your score is </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Welcome to Grace's Quiz!"</span><span class="p">)</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Do you want to take Grace's Quiz?"</span><span class="p">)</span>
+
+<span class="c1">#Start game dialogue</span>
+<span class="k">if</span> <span class="n">start</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"yes"</span> <span class="ow">or</span> <span class="n">start</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"y"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Great! Good luck 😊"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Take a mindful minute. You got this :)"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"This game will have 5 questions!"</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1">#Loop to ask questions</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">question_answer</span><span class="p">):</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">question_answer</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">question_answer</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">ask_question</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1">#Prints a message depending on what score user got</span>
+<span class="k">if</span> <span class="n">score</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Wow! You know your stuff! Keep up the good work! 🤗"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">score</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Almost! Try again."</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"You're average 😐 "</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Welcome to Grace's Quiz!
+Great! Good luck 😊
+What command defines a function or method?
+def
+Good job! The answer is def!
+Your score is 1.
+What conditionally executes a block of code, along with else and elif?
+if statement
+Good job! The answer is if statement!
+Your score is 2.
+What does a jupyter notebook end in?
+ipynb
+Good job! The answer is ipynb!
+Your score is 3.
+What is style of programming characterized by the identification of classes of objects closely linked with the methods?
+object oriented programming
+Good job! The answer is object oriented programming!
+Your score is 4.
+What is the text at the front of a markdown post called?
+object oriented programming
+Sorry, incorrect 😢. The right answer was front matter.
+Your score is 4.
+Almost! Try again.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/repository_1/trimester%201/2022/08/30/python_lists.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/repository_1/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/repository_1/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/repository_1/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Grace&#39;s blog :)</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/gwang1224" target="_blank" title="gwang1224"><svg class="svg-icon grey"><use xlink:href="/repository_1/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
