@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: Adventure Quiz
+description: 
 categories: [Trimester 1]
 title: 1.1 Collaboration
 ---
