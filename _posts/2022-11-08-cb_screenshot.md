@@ -25,7 +25,7 @@ Again, I used Jupyter Notebook to visualize the code. I did not realize that the
 
 ## Topics to work on:
 
-#### The Internet
+### The Internet
 
 **packet**: a small amount of data sent over a network; each packet includes the source and destination information
 
@@ -68,3 +68,7 @@ Application: giving a domain name
 - https is http w/ security
 
 ![]({{ site.baseurl }}/images/cb_screenshot/internetflowchart.png)
+
+### Binary Numbers
+
+![]({{ site.baseurl }}/images/cb_screenshot/binarynum.png)
