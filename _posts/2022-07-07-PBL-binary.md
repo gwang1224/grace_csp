@@ -1,16 +1,13 @@
 ---
-title: Binary Math
+title: Binary Color Conversion
 layout: default
 description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
 
 ---
-
 <!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
-
-{% assign BITS = 3 %}
-
+{% assign BITS = 24 %}
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <span class="fs-4">Binary Math with Conversions</span>
@@ -36,9 +33,10 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
             </tr>
             </table>
         </div>
+        <div id="color">Test</div>
         <div class="col-12">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
-            {% assign bits = BITS | minus: 1 %} 
+            {% assign bits = BITS | minus: 1 %}
             <table class="table">
             <tr>
                 {% comment %}Build many bits{% endcomment %}
@@ -54,16 +52,10 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
                 <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
                 {% endfor %}
             </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>4</td>
-            </tr>
             </table>
         </div>
     </div>
 </div>
-
 <script>
     const BITS = {{ BITS }};
     const MAX = 2 ** BITS - 1;
@@ -71,7 +63,6 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
     const IMAGE_ON = "{{site.baseurl}}/images/bulb_on.gif";
     const MSG_OFF = "Turn off";
     const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png"
-
     // return string with current value of each bit
     function getBits() {
         let bits = "";
@@ -82,6 +73,7 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
     }
     // setter for DOM values
     function setConversions(binary) {
+        var color = "#" + parseInt(binary, 2).toString(16);
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -89,6 +81,7 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+        document.getElementById("color").style.backgroundColor = color;
     }
     //
     function decimal_2_base(decimal, base) {
@@ -107,7 +100,6 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
         }
         return conversion;
     }
-
     // toggle selected bit and recalculate
     function toggleBit(i) {
         //alert("Digit action: " + i );
