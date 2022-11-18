@@ -34,22 +34,22 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
             </table>
         </div>
         <div id="color">Test</div>
-        <div class="col-12">
+        <div class="center">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
             {% assign bits = BITS | minus: 1 %}
             <table class="table">
             <tr>
                 {% comment %}Build many bits{% endcomment %}
                 {% for i in (0..bits) %}
-                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
-                    <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
+                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="15" height="Auto">
+                    <button style="width:15px; height:20px;" type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})"></button>
                 </td>
                 {% endfor %}
             </tr>
             <tr>
                 {% comment %}Value of bit{% endcomment %}
                 {% for i in (0..bits) %}
-                <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
+                <td><input style="width:15px; height:20px;" type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
                 {% endfor %}
             </tr>
             </table>
@@ -59,9 +59,9 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
 <script>
     const BITS = {{ BITS }};
     const MAX = 2 ** BITS - 1;
-    const MSG_ON = "Turn on";
+    const MSG_ON = "";
     const IMAGE_ON = "{{site.baseurl}}/images/bulb_on.gif";
-    const MSG_OFF = "Turn off";
+    const MSG_OFF = "";
     const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png"
     // return string with current value of each bit
     function getBits() {
