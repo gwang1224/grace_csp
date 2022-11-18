@@ -1,13 +1,17 @@
 ---
-title: Binary Color Conversion
+title: Binary Conversion
 layout: default
 description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
 
 ---
+
 <!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
-{% assign BITS = 24 %}
+
+{% assign BITS = 8 %}
+
+
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <span class="fs-4">Binary Math with Conversions</span>
@@ -21,6 +25,7 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
                 <th>Octal</th>
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
+                <th>ASCII</th>
                 <th>Minus</th>
             </tr>
             <tr>
@@ -29,40 +34,52 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
                 <td id="octal">0</td>
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
+                <td id="demo">0</td>
                 <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
             </tr>
             </table>
         </div>
-        <div id="color">Test</div>
-        <div class="center">
+        <div class="col-12">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
-            {% assign bits = BITS | minus: 1 %}
+            {% assign bits = BITS | minus: 1 %} 
             <table class="table">
             <tr>
                 {% comment %}Build many bits{% endcomment %}
                 {% for i in (0..bits) %}
-                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="15" height="Auto">
-                    <button style="width:15px; height:20px;" type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})"></button>
+                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
                 </td>
                 {% endfor %}
             </tr>
             <tr>
                 {% comment %}Value of bit{% endcomment %}
                 {% for i in (0..bits) %}
-                <td><input style="width:15px; height:20px;" type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
+                <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
                 {% endfor %}
+            </tr>
+            <tr>
+                <td>128</td>
+                <td>64</td>
+                <td>32</td>
+                <td>16</td>
+                <td>8</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
             </tr>
             </table>
         </div>
     </div>
 </div>
+
 <script>
     const BITS = {{ BITS }};
     const MAX = 2 ** BITS - 1;
-    const MSG_ON = "";
+    const MSG_ON = "Turn on";
     const IMAGE_ON = "{{site.baseurl}}/images/bulb_on.gif";
-    const MSG_OFF = "";
+    const MSG_OFF = "Turn off";
     const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png"
+
     // return string with current value of each bit
     function getBits() {
         let bits = "";
@@ -73,7 +90,6 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
     }
     // setter for DOM values
     function setConversions(binary) {
-        var color = "#" + parseInt(binary, 2).toString(16);
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -81,8 +97,10 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
-        document.getElementById("color").style.backgroundColor = color;
+        //ASCII conversion
+        document.getElementById("demo").innerHTML = String.fromCharCode(parseInt(binary, 2).toString());
     }
+
     //
     function decimal_2_base(decimal, base) {
         let conversion = "";
@@ -100,6 +118,7 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
         }
         return conversion;
     }
+
     // toggle selected bit and recalculate
     function toggleBit(i) {
         //alert("Digit action: " + i );
