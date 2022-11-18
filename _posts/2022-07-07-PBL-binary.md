@@ -54,6 +54,11 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
                 <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
                 {% endfor %}
             </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>4</td>
+            </tr>
             </table>
         </div>
     </div>
