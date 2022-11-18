@@ -9,36 +9,50 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
 <!-- Hack 3: do your own thing -->
 
 {% assign BITS = 24 %}
+
+<style>
+    .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <span class="fs-4">Binary Math with Conversions</span>
     </header>
     <div class="row justify-content-md-center">
         <div class="col-8">
-            <table class="table">
+            <table class="center">
             <tr id="table">
+                <th>Shift Left</th>
                 <th>Plus</th>
                 <th>Binary</th>
                 <th>Octal</th>
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
+                <th>ASCII</th>
                 <th>Minus</th>
+                <th>Shift Right</th>
             </tr>
             <tr>
+                <td><button type="button" id="shiftleft" onclick="shiftleft(1)"><<</button></td>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                 <td id="binary">00000000</td>
                 <td id="octal">0</td>
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
+                <td id="ASCII">0</td>
                 <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                <td><button type="button" id="shiftright" onclick="shiftright(1)">>></button></td>
             </tr>
             </table>
         </div>
-        <div id="color">Test</div>
+        <div id="color" style="width:500px; height:50px;"><center> HEX Code Color</center></div>
         <div class="center">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
             {% assign bits = BITS | minus: 1 %}
-            <table class="table">
+            <table class="table" class="center">
             <tr>
                 {% comment %}Build many bits{% endcomment %}
                 {% for i in (0..bits) %}
@@ -82,6 +96,9 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+        // ASCII conversion
+        document.getElementById("ASCII").innerHTML = String.fromCharCode(parseInt(binary, 2).toString());
+        // Color
         document.getElementById("color").style.backgroundColor = color;
     }
     //
@@ -131,6 +148,56 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
         } else  {     // MINUS
         decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
         }
+        // convert the result back to binary
+        binary = decimal_2_base(decimal, 2);
+        // update conversions
+        setConversions(binary);
+        // update bits
+        for (let i = 0; i < binary.length; i++) {
+        let digit = binary.substr(i, 1);
+        document.getElementById('digit' + i).value = digit;
+        if (digit === "1") {
+            document.getElementById('bulb' + i).src = IMAGE_ON;
+            document.getElementById('butt' + i).innerHTML = MSG_OFF;
+        } else {
+            document.getElementById('bulb' + i).src = IMAGE_OFF;
+            document.getElementById('butt' + i).innerHTML = MSG_ON;
+        }
+        }
+    }
+    //Left
+    function shiftleft(n) {
+        let binary = getBits();
+        // convert to decimal and do math
+        let decimal = parseInt(binary, 2);
+        if (n > 0) {  // positive integer
+        decimal = MAX === decimal ? 0 : decimal << n; // shift left
+        } 
+        // convert the result back to binary
+        binary = decimal_2_base(decimal, 2);
+        // update conversions
+        setConversions(binary);
+        // update bits
+        for (let i = 0; i < binary.length; i++) {
+        let digit = binary.substr(i, 1);
+        document.getElementById('digit' + i).value = digit;
+        if (digit === "1") {
+            document.getElementById('bulb' + i).src = IMAGE_ON;
+            document.getElementById('butt' + i).innerHTML = MSG_OFF;
+        } else {
+            document.getElementById('bulb' + i).src = IMAGE_OFF;
+            document.getElementById('butt' + i).innerHTML = MSG_ON;
+        }
+        }
+    }
+    // shift right
+    function shiftright(n) {
+        let binary = getBits();
+        // convert to decimal and do math
+        let decimal = parseInt(binary, 2);
+        if (n > 0) {  // positive integer
+        decimal = MAX === decimal ? 0 : decimal >> n; // shift right
+        } 
         // convert the result back to binary
         binary = decimal_2_base(decimal, 2);
         // update conversions
