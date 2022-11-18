@@ -9,7 +9,7 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
 
-{% assign BITS = 3 %}
+{% assign BITS = 8 %}
 
 
 <div class="container bg-primary">
@@ -56,6 +56,16 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
                 {% for i in (0..bits) %}
                 <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
                 {% endfor %}
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>4</td>
+                <td>8</td>
+                <td>16</td>
+                <td>32</td>
+                <td>64</td>
+                <td>128</td>
             </tr>
             </table>
         </div>
