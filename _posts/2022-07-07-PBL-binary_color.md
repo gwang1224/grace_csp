@@ -48,7 +48,7 @@ description: A Binary Math illustrative application using HTML, Liquid, and Java
             </tr>
             </table>
         </div>
-        <div id="color" style="width:500px; height:50px;"><center> HEX Code Color</center></div>
+        <div id="color" style="width:1000px; height:50px;"><center> HEX Code Color</center></div>
         <div class="center">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
             {% assign bits = BITS | minus: 1 %}
