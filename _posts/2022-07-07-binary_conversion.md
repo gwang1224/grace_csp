@@ -11,6 +11,8 @@ description: A Binary Math illustrative application using HTML and JavaScript. C
 
 {% assign BITS = 24 %}
 
+<p>hi</p>
+
 <style>
     .center {
   margin-left: auto;
