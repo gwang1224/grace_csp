@@ -3,9 +3,9 @@
     
         "post0": {
             "title": "Unit 3.3-3.4 Student Teaching",
-            "content": "Hack 1 . algorithm: the algorithm describes the instructions to complete a task, which done by the graphic with a list of instructions to do . | sequencing: order of how to do something . Set item to number to search for | Get next number in list | If number = item, display &quot;item found&quot; | If more numbers in list, go back to step 2 | Display &quot;item not found | | selection If the number = item, the algorithm selects the item. . | iteration The iteration loops through the list to find all the numbers equal to the item . | Hack 2 . num1 = 5 num2 = num1 * 3 num3 = num2 / num1 * (9 % 2) * 4 result = (num3 % num1 + num2) % num3 * 3 / 5 print(result) . 3.0 . Hack 3 . 1 down: iteration 2 down: selection 3 across: sequence . .",
-            "url": "https://gwang1224.github.io/repository_1/jupyter/python/2022/11/30/student-teaching2.html",
-            "relUrl": "/jupyter/python/2022/11/30/student-teaching2.html",
+            "content": "Hack 1 . algorithm: the algorithm describes the instructions to complete a task, which done by the graphic with a list of instructions to do . | sequencing: order of how to do something . Set item to number to search for | Get next number in list | If number = item, display &quot;item found&quot; | If more numbers in list, go back to step 2 | Display &quot;item not found | | selection If the number = item, the algorithm selects the item. . | iteration The iteration loops through the list to find all the numbers equal to the item . | Hack 2 . num1 = 5 num2 = num1 * 3 num3 = num2 / num1 * (9 % 2) * 4 result = (num3 % num1 + num2) % num3 * 3 / 5 print(result) . 3.0 . Hack 3 . 1 down: iteration 2 down: selection 3 across: sequence . . Notes . 3.3.1 . - .",
+            "url": "https://gwang1224.github.io/repository_1/trimester%202/2022/11/30/student-teaching2.html",
+            "relUrl": "/trimester%202/2022/11/30/student-teaching2.html",
             "date": " • Nov 30, 2022"
         }
         
