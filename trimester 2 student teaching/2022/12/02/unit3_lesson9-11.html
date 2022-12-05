@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -148,8 +148,12 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Unit-3.11">Unit 3.11 </a>
+<li class="toc-entry toc-h2"><a href="#Unit-3.11-Binary-Search">Unit 3.11 Binary Search </a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#Binary-Search:">Binary Search: </a></li>
+<li class="toc-entry toc-h3"><a href="#Binary-Search-Steps:">Binary Search Steps: </a></li>
+<li class="toc-entry toc-h3"><a href="#Practice:">Practice: </a></li>
+<li class="toc-entry toc-h3"><a href="#Hacks:">Hacks: </a></li>
 <li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
 </ul>
 </li>
@@ -276,54 +280,77 @@ ELSE
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>I'm thinking of a number between 1 and 100.
-You guessed 5.
-You are bad at guessing
-Guess a number between 5 and 100.
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb Cell 4</span> in <span class="ansi-cyan-fg">&lt;cell line: 33&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb#X11sZmlsZQ%3D%3D?line=30'&gt;31&lt;/a&gt;</span>     return lower_bound, upper_bound
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb#X11sZmlsZQ%3D%3D?line=32'&gt;33&lt;/a&gt;</span> while user_guess != number:
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb#X11sZmlsZQ%3D%3D?line=33'&gt;34&lt;/a&gt;</span>     user_guess = guess()
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb#X11sZmlsZQ%3D%3D?line=34'&gt;35&lt;/a&gt;</span>     num_guesses += 1
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb#X11sZmlsZQ%3D%3D?line=35'&gt;36&lt;/a&gt;</span>     print(f"You guessed {user_guess}.")
-
-<span class="ansi-green-intense-fg ansi-bold">/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb Cell 4</span> in <span class="ansi-cyan-fg">guess</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb#X11sZmlsZQ%3D%3D?line=16'&gt;17&lt;/a&gt;</span> def guess():
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb#X11sZmlsZQ%3D%3D?line=17'&gt;18&lt;/a&gt;</span>     guess = int(input("Guess a letter: ")) #change this
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2022-12-02-unit3_lesson9-11.ipynb#X11sZmlsZQ%3D%3D?line=18'&gt;19&lt;/a&gt;</span>     return guess
-
-<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: ''</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Unit-3.11">
-<a class="anchor" href="#Unit-3.11" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3.11<a class="anchor-link" href="#Unit-3.11"> </a>
+<h2 id="Unit-3.11-Binary-Search">
+<a class="anchor" href="#Unit-3.11-Binary-Search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3.11 Binary Search<a class="anchor-link" href="#Unit-3.11-Binary-Search"> </a>
 </h2>
+<h3 id="Binary-Search:">
+<a class="anchor" href="#Binary-Search:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search:<a class="anchor-link" href="#Binary-Search:"> </a>
+</h3>
+<p>repeatedly dividing a search interval in half</p>
+<h3 id="Binary-Search-Steps:">
+<a class="anchor" href="#Binary-Search-Steps:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search Steps:<a class="anchor-link" href="#Binary-Search-Steps:"> </a>
+</h3>
+<ul>
+<li>first put the numbers in order<ul>
+<li>ascending</li>
+<li>descending</li>
+</ul>
+</li>
+<li>find the middle number first<ul>
+<li>this is found by taking the highest index number plus the lowest index number and divide by 2
+<img src="https://cdn.discordapp.com/attachments/806618712056528906/1049218338116620339/IMG_8574.jpg" alt="photo">
+</li>
+<li>the numbers on the right will be greater and the numbers on the left will be smaller</li>
+<li>this can be represented with a binary tree<ul>
+<li>middle number with the smaller number branched off on the left and bigger numbers branched off on the right
+<img src="https://cdn.discordapp.com/attachments/806618712056528906/1049218809539592212/IMG_1541.jpg" alt="photo">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>these lists are not always numbers<ul>
+<li>lists can be made with strings</li>
+<li>ex. ["apple", "banana", "cherry", "peach", "watermelon"]</li>
+<li>alphabetical order<ul>
+<li>a-z</li>
+<li>z-a</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Practice:">
+<a class="anchor" href="#Practice:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice:<a class="anchor-link" href="#Practice:"> </a>
+</h3>
+<ol>
+<li>What is the middle number in a Binary Search given the following set of numbers in order: 1, 5, 19, 44, 89</li>
+<li>What is the middle number in a Binary Search given the following set of numbers that are not in order: 3, 87, 12, 66, 22</li>
+</ol>
+<h3 id="Hacks:">
+<a class="anchor" href="#Hacks:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks:<a class="anchor-link" href="#Hacks:"> </a>
+</h3>
+<ol>
+<li>calculate the middle index and create a binary tree for each of these lists<ul>
+<li>12, 14, 43, 57, 79, 80, 99</li>
+<li>92, 43, 74, 66, 30, 12, 1</li>
+<li>7, 13, 96, 111, 33, 84, 60</li>
+</ul>
+</li>
+<li>Using one of the sets of numbers from the question above, what would be the second number looked at in a binary search if the number is more than the middle number?</li>
+<li>Which of the following lists can NOT a binary search be used in order to find a targeted value?
+ a. ["amy", "beverly", "christian", "devin"]
+ b. [-1, 2, 6, 9, 19]
+ c. [3, 2, 8, 12, 99]
+ d. ["xylophone", "snowman", "snake", "doorbell", "author"]</li>
+</ol>
+
 </div>
 </div>
 </div>
