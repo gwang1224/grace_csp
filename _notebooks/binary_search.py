@@ -70,4 +70,3 @@ while user_guess != number:
     print(f"Guess a number between {lower_bound} and {upper_bound}.")
 
 print(f"You guessed the number in {num_guesses} guesses!")
-
