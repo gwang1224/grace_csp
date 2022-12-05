@@ -1,16 +1,11 @@
 # import random
 
-# # print("Hello! What is your name?")
-# # name = input("Name:")
-
 # num_guesses = 0
 # user_guess = 0
 
 # number = random.randint(1,100)
-# print(number)
 
 # print(f"I'm thinking of a number between 1 and 100.")
-# end_game = False
 
 # def guess():
 #     guess = int(input("Guess a number: "))
@@ -21,8 +16,6 @@
 #         print("Your guess was too low :(")
 #     elif guess > number:
 #         print("Your guess was too high")
-#     else:
-#         end_game = True
 
 # while user_guess != number:
 #     user_guess = guess()
@@ -52,8 +45,7 @@ def guess():
     return guess
 
 def search(number, guess):
-    global lower_bound
-    global upper_bound
+    global lower_bound, upper_bound
     if guess < number:
         print("Your guess was too low")
         lower_bound = guess
