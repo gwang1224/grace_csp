@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      10 min read
     
 </span></p>
 
@@ -154,14 +154,29 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#How-to-write-Nested-Conditionals-as-Boolean-expressions">How to write Nested Conditionals as Boolean expressions </a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#Hacks">Hacks </a></li>
-<li class="toc-entry toc-h4"><a href="#Hacks:">Hacks: </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h3"><a href="#3.9.3-Using-preexisting-algorithms-(Grace)">3.9.3 Using preexisting algorithms (Grace) </a></li>
+<li class="toc-entry toc-h3"><a href="#3.9.2-Developing-Algorithms-(Annika)">3.9.2 Developing Algorithms (Annika) </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Developing-Algorithms">Developing Algorithms </a></li>
+<li class="toc-entry toc-h4"><a href="#Review-of-Selection-and-Iteration">Review of Selection and Iteration </a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#Example-1">Example 1 </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h4"><a href="#Example-2">Example 2 </a></li>
+<li class="toc-entry toc-h4"><a href="#Hacks">Hacks </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#3.9.3-Using-preexisting-algorithms-(Grace)">3.9.3 Using preexisting algorithms (Grace) </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Main-Idea">Main Idea </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Unit-3.11-Binary-Search">Unit 3.11 Binary Search </a>
+<li class="toc-entry toc-h2"><a href="#Unit-3.11-Binary-Search-(Claire)">Unit 3.11 Binary Search (Claire) </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Binary-Search:">Binary Search: </a></li>
 <li class="toc-entry toc-h3"><a href="#Binary-Search-Steps:">Binary Search Steps: </a></li>
@@ -200,8 +215,7 @@ window.onload = wrap_img;
 </li>
 </ul>
 <p>Today we will be looking at algorithms from another standpoint.
-<br>Q: How many ways are there to peel a banana? Is the result the same?
-6:01</p>
+Q: How many ways are there to peel a banana? Is the result the same?</p>
 <h4 id="Main-Idea-1:-Algorithms-can-be-written-in-different-ways-and-still-do-the-same-thing">
 <a class="anchor" href="#Main-Idea-1:-Algorithms-can-be-written-in-different-ways-and-still-do-the-same-thing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main Idea 1: Algorithms can be written in different ways and still do the same thing<a class="anchor-link" href="#Main-Idea-1:-Algorithms-can-be-written-in-different-ways-and-still-do-the-same-thing"> </a>
 </h4>
@@ -279,8 +293,10 @@ window.onload = wrap_img;
 <h4 id="So,-why-is-this-important?-Why-are-we-even-doing-this?">
 <a class="anchor" href="#So,-why-is-this-important?-Why-are-we-even-doing-this?" aria-hidden="true"><span class="octicon octicon-link"></span></a>So, why is this important? Why are we even doing this?<a class="anchor-link" href="#So,-why-is-this-important?-Why-are-we-even-doing-this?"> </a>
 </h4>
-<p>when 2 algorithms look extremely similar, it is easy to assume they do the same thing. However, that is not the case and we have learn how to notice small differences in code and pretty much debug.
-<br>- just know that codes that look similar don't always produce the same things:)</p>
+<p>When 2 algorithms look extremely similar, it is easy to assume they do the same thing. However, that is not the case and we have learn how to notice small differences in code and pretty much debug.</p>
+<ul>
+<li>just know that codes that look similar don't always produce the same things :)</li>
+</ul>
 <h4 id="Real-life-situation-(Storytime)">
 <a class="anchor" href="#Real-life-situation-(Storytime)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Real-life situation (Storytime)<a class="anchor-link" href="#Real-life-situation-(Storytime)"> </a>
 </h4>
@@ -346,37 +362,73 @@ When collaborating or working on group projects, two people might come up with t
 <li>it is a holiday</li>
 </ul>
 
-<pre><code>isHoliday = False
-isWeekday = True
-# setting variables here
-if isHoliday == True:
-    print("don't go to school!")
-#if holiday, dont go to school
-else:
-    if isWeekday == True:
-        print("go to school!")
-# otherwise, if it is a weekday, go to school
-    else:
-        print("don't go to school")
-# but if it is neither a weekday or holiday, don't go to school</code></pre>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-<pre><code>isHoliday = False
-isWeekday = True
-# setting variables here (same as above to make comparison easier)
-driveSchool = not(isHoliday) and isWeekday
-if driveSchool == False:
-    print("don't go to school!")
-if driveSchool == True:
-    print("go to school!")
-# now we can make a regular conditional/ if statement without having a nested conditional</code></pre>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">isHoliday</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">isWeekday</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1">#if holiday, dont go to school</span>
+<span class="k">if</span> <span class="n">isHoliday</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"don't go to school!"</span><span class="p">)</span>
+
+<span class="c1"># otherwise, if it is a weekday, go to school</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">isWeekday</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"go to school!"</span><span class="p">)</span>
+    <span class="c1"># but if it is neither a weekday or holiday, don't go to school</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"don't go to school"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">isHoliday</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">isWeekday</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># setting variables here (same as above to make comparison easier)</span>
+<span class="n">driveSchool</span> <span class="o">=</span> <span class="ow">not</span><span class="p">(</span><span class="n">isHoliday</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isWeekday</span>
+<span class="k">if</span> <span class="n">driveSchool</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"don't go to school!"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">driveSchool</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"go to school!"</span><span class="p">)</span>
+<span class="c1"># now we can make a regular conditional/ if statement without having a nested conditional</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Hacks">
 <a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
 </h4>
-<h4 id="Hacks:">
-<a class="anchor" href="#Hacks:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks:<a class="anchor-link" href="#Hacks:"> </a>
-</h4>
 <p>Make your own version of this!
-<br>requirements:</p>
+<br>Requirements:</p>
 <ul>
 <li>main goal of algorithm</li>
 <li>main/base algorithm (includes a nested conditional)
@@ -408,9 +460,178 @@ if driveSchool == True:
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.9.2-Developing-Algorithms-(Annika)">
+<a class="anchor" href="#3.9.2-Developing-Algorithms-(Annika)" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.9.2 Developing Algorithms (Annika)<a class="anchor-link" href="#3.9.2-Developing-Algorithms-(Annika)"> </a>
+</h3>
+<h4 id="Developing-Algorithms">
+<a class="anchor" href="#Developing-Algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developing Algorithms<a class="anchor-link" href="#Developing-Algorithms"> </a>
+</h4>
+<ul>
+<li>When creating an algorithm, its good to outline its process before coding<ul>
+<li>This ensures that it is <strong>sequenced</strong> correctly</li>
+</ul>
+</li>
+<li>You should represent the algorithm using a flowchart or natural language<ul>
+<li>Visualization can help you better see the flow of the whole algorithm</li>
+<li>This may allow for the coding process to be more efficient and effective</li>
+</ul>
+</li>
+</ul>
+<h4 id="Review-of-Selection-and-Iteration">
+<a class="anchor" href="#Review-of-Selection-and-Iteration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review of Selection and Iteration<a class="anchor-link" href="#Review-of-Selection-and-Iteration"> </a>
+</h4>
+<ul>
+<li>Algorithms with iteration repeat a function until a goal is reached<ul>
+<li>To more easily represent an algorithm without showing all the repeated steps, we can use iteration</li>
+</ul>
+</li>
+<li>Algorithms with selection only go through certain functions if certain things are true or false</li>
+</ul>
+<h5 id="Example-1">
+<a class="anchor" href="#Example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 1<a class="anchor-link" href="#Example-1"> </a>
+</h5>
+<p><img src="https://mail.google.com/mail/u/0?ui=2&amp;ik=307c2bfad8&amp;attid=0.1&amp;permmsgid=msg-a:r-3887059261601548865&amp;th=184e4f4ea4a304ff&amp;view=att&amp;disp=safe&amp;realattid=f_lbbiony40" alt=""></p>
+<ol>
+<li>Start</li>
+<li>The number of pretzels in the pack is 6</li>
+<li>Eat one fruit snack, number of pretzels in pack goes down by 1</li>
+<li>How many pretzels are left?</li>
+<li>Repeat step 3 until number of pretzels is 0</li>
+<li>Display that pack is empty</li>
+<li>Finish</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretzel</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">pretzel</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="n">pretzel</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pretzel</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pretzel</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"All done!"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Example-2">
+<a class="anchor" href="#Example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 2<a class="anchor-link" href="#Example-2"> </a>
+</h4>
+<p>The parking rate for a garage is as follows: <br>
+Less than one hour: Free <br>
+1-2 hours: $5 &lt;br&gt;
+2-3 hours: $8 <br>
+3-4 hours: $10 &lt;br&gt;
+4+ hours: $12</p>
+<p><img src="https://mail.google.com/mail/u/0?ui=2&amp;ik=307c2bfad8&amp;attid=0.1&amp;permmsgid=msg-a:r2030496128188097827&amp;th=184e52d1193a9407&amp;view=att&amp;disp=inline&amp;realattid=f_lbbkvkt70" alt=""></p>
+<ol>
+<li>Start</li>
+<li>Input number of hours parked</li>
+<li>If hours is less than 1, cost is free</li>
+<li>If hours is between 1 and 2, cost is $5</li>
+<li>If hours is between 2 and 3, cost is $8</li>
+<li>If hours is between 3 and 4, cost is $10</li>
+<li>If hours is more than 4, cost is $12</li>
+<li>Display cost and goodbye</li>
+<li>Finish</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The parking rate is as follows: </span><span class="se">\n</span><span class="s2"> Less than one hour: Free </span><span class="se">\n</span><span class="s2"> 1-2 hours: $5 </span><span class="se">\n</span><span class="s2"> 2-3 hours: $8 </span><span class="se">\n</span><span class="s2"> 3-4 hours: $10 </span><span class="se">\n</span><span class="s2"> 4+ hours: $12"</span><span class="p">)</span>
+
+<span class="n">time</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"How many hours have you parked at this garage?"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"How many hours have you parked at this garage?"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="s2">"hours costs:"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Free"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">time</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"$5"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">time</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"$8"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">time</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"$10"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"$12"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Have a good day!"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h4>
+<p>Develop your own complex algorithm using a flowchart and natural language, then code it!</p>
+<p>Requirements:</p>
+<ul>
+<li>Includes both a flowchart AND natural language</li>
+<li>Working code of the same algorithm</li>
+<li>Incorporates selection AND/OR iteration</li>
+<li>Make it creative!</li>
+</ul>
+<p>Tips:</p>
+<ul>
+<li>
+<a href="https://online.visual-paradigm.com/app/diagrams/#diagram:proj=0&amp;type=Flowchart&amp;width=11&amp;height=8.5&amp;unit=inch">This site</a> is good for making flowcharts!</li>
+<li>Natural language should just be a list</li>
+<li>Think about the whole process, not just the end result</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.9.3-Using-preexisting-algorithms-(Grace)">
 <a class="anchor" href="#3.9.3-Using-preexisting-algorithms-(Grace)" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.9.3 Using preexisting algorithms (Grace)<a class="anchor-link" href="#3.9.3-Using-preexisting-algorithms-(Grace)"> </a>
 </h3>
+<h4 id="Main-Idea">
+<a class="anchor" href="#Main-Idea" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main Idea<a class="anchor-link" href="#Main-Idea"> </a>
+</h4>
+<ul>
+<li>Knowing existing algorithms can help construct new ones</li>
+<li>simple existing algorithms can include<ul>
+<li>determining min or max of two or more numbers</li>
+<li>computing the sum or average</li>
+<li>identifying if an integer is even or odd</li>
+</ul>
+</li>
+<li>Using existing correct algorithms can help as building blocks to reduce development time, testing, and identification of errors</li>
+</ul>
 <p>Create an algorithm that will start with any positive integer n and display the full sequence of numbers that result from following the Collatz Conjecture.</p>
 <p>Example: 6 -&gt; 3 -&gt; 10 -&gt; 5 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1</p>
 <p>What does this function do?</p>
@@ -516,8 +737,8 @@ ELSE
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Unit-3.11-Binary-Search">
-<a class="anchor" href="#Unit-3.11-Binary-Search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3.11 Binary Search<a class="anchor-link" href="#Unit-3.11-Binary-Search"> </a>
+<h2 id="Unit-3.11-Binary-Search-(Claire)">
+<a class="anchor" href="#Unit-3.11-Binary-Search-(Claire)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3.11 Binary Search (Claire)<a class="anchor-link" href="#Unit-3.11-Binary-Search-(Claire)"> </a>
 </h2>
 <h3 id="Binary-Search:">
 <a class="anchor" href="#Binary-Search:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search:<a class="anchor-link" href="#Binary-Search:"> </a>
