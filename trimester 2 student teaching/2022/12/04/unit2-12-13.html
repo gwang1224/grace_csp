@@ -136,8 +136,6 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h3"><a href="#Parameters">Parameters </a></li>
-<li class="toc-entry toc-h3"><a href="#Topic-3.13-(3.C):">Topic 3.13 (3.C): </a></li>
-<li class="toc-entry toc-h3"><a href="#Rubric">Rubric </a></li>
 </ul>
 </li>
 </ul><!--
@@ -652,11 +650,12 @@ For example:</li>
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><!-- function is called here --></p>
-<p><button id="enter" onclick="add(a,b)">add</button></p>
+<button id="button_A">Press to do some math</button><p>var a = 3</p>
+<p>var b = 4</p>
+<button id="enter" onclick="add(a,b)">add</button> 
 <p id="result1"></p>
 <button id="enter" onclick="subtract(a,b)">subtract</button> 
 <p id="result2"></p>
@@ -666,34 +665,40 @@ For example:</li>
 <p id="result4"></p>
 <p><!-- javascript --></p>
 <p><script>
-    function add(a,b) {
-        document.getElementById("result1").innerHTML = a + b // math
-    }
-    function subtract(a,b) {
-        document.getElementById("result2").innerHTML = a - b
-    }
-    function multiply(a,b) {
-        document.getElementById("result3").innerHTML = a * b // math
-    }
-    function divide(a,b) {
-        document.getElementById("result4").innerHTML = a / b // math
-    }
-    // variables are defined
-    var a = 3
-    var b = 4
-</script>
+    const buttonA = document.querySelector('#button_A');
+    const headingA = document.querySelector('#heading_A');</p>
+
+<pre><code>buttonA.onclick = () =&gt; {
+var a = prompt('First number:');
+var b = prompt('Second number:');
+</code></pre>
+<p>}</p>
+
+<pre><code>function add(a,b) {
+    document.getElementById("result1").innerHTML = a + b // math
+}
+function subtract(a,b) {
+    document.getElementById("result2").innerHTML = a - b
+}
+function multiply(a,b) {
+    document.getElementById("result3").innerHTML = a * b // math
+}
+function divide(a,b) {
+    document.getElementById("result4").innerHTML = a / b // math
+}
+// variables are defined
+var a = 3
+var b = 4
+</code></pre>
+<p>&lt;/script&gt;
 ```</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Topic-3.13-(3.C):">
-<a class="anchor" href="#Topic-3.13-(3.C):" aria-hidden="true"><span class="octicon octicon-link"></span></a>Topic 3.13 (3.C):<a class="anchor-link" href="#Topic-3.13-(3.C):"> </a>
-</h3>
-<ol>
+<h3 id="Topic-3.13-(3.C):">Topic 3.13 (3.C):<a class="anchor-link" href="#Topic-3.13-(3.C):"> </a></h3><ol>
 <li>Define <font color="#ffffc2" style="font-weight: bold">procedure names</font> and <font color="#ffffc2" style="font-weight: bold">arguments</font> in your own words.</li>
 <li>Code some <font color="#ffffc2" style="font-weight: bold">procedures</font> that use <font color="#ffffc2" style="font-weight: bold">arguments</font> and <font color="#ffffc2" style="font-weight: bold">parameters</font> with Javascript and HTML (make sure they are interactive on your hacks page, allowing the user to input numbers and click a button to produce an output)<ul>
 <li>Add two numbers</li>
@@ -707,18 +712,13 @@ For example:</li>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Rubric">
-<a class="anchor" href="#Rubric" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rubric<a class="anchor-link" href="#Rubric"> </a>
-</h3>
-<p>Each hack is worth 0.3 points</p>
+<h3 id="Rubric">Rubric<a class="anchor-link" href="#Rubric"> </a></h3><p>Each hack is worth 0.3 points</p>
 <ul>
 <li>To get 0.3 points for each hack you must:<ul>
 <li>Complete each hack correctly and completely</li>
-<li>Submit by 11:59PM on <mark color="#ffffc2">Friday, December 9</mark>
-</li>
+<li>Submit by 11:59PM on <mark color="#ffffc2">Friday, December 9</mark></li>
 </ul>
 </li>
 <li>The last 0.1 points are if you do a good job on the binary calculator.</li>
@@ -729,7 +729,12 @@ For example:</li>
 </div>
 </div>
 </div>
+ 
 
+</script></p>
+</div>
+</div></div>
+</div>
 
 
   </div><a class="u-url" href="/repository_1/trimester%202%20student%20teaching/2022/12/04/unit2-12-13.html" hidden></a>
