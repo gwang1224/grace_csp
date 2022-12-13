@@ -402,6 +402,14 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Abstraction is needed for this math calculator because many steps are needed for the algorithm. First, functions need to be made for each of the mathematical operations. The code also needs to get the user input. Using the user input, the user can then determine what operation they want to use. The code should then print out the solution. These steps need to be broken down for the coder to now how to easily code calculator.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -409,45 +417,32 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># is a separate element in the list</span>
-<span class="k">def</span> <span class="nf">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="c1"># use the split() method to split the string into a list of words</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">'''takes a string as input and returns a list of words, where each word is a separate element in the list'''</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
-
-	<span class="c1"># initialize a new list to hold all non-empty strings</span>
     <span class="n">new_words</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">word</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">:</span>
-            <span class="c1"># add all non-empty substrings of `words` to `new_words`</span>
             <span class="n">new_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">words</span>
 
-<span class="c1"># this function takes a list of words as input and returns the number of words</span>
-<span class="c1"># that start with the given letter (case-insensitive)</span>
 <span class="k">def</span> <span class="nf">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">letter</span><span class="p">):</span>
+    <span class="sd">'''function takes a list of words as input and returns the number of words that start with the given letter'''</span>
     <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-    
-    <span class="c1"># loop through the list of words and check if each word starts with the given letter</span>
     <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="c1"># use the lower() method to make the comparison case-insensitive</span>
         <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">letter</span><span class="p">):</span>
             <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
     
     <span class="k">return</span> <span class="n">count</span>
 
-<span class="c1"># this function takes a string as input and returns the number of words that start with 'a'</span>
 <span class="k">def</span> <span class="nf">count_words_starting_with_a_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="c1"># use the split_string() function to split the input string into a list of words</span>
+    <span class="sd">'''takes a string as input and returns the number of words that start with 'a'''</span><span class="s1">'</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-    
-    <span class="c1"># use the count_words_starting_with_letter() function to count the number of words</span>
-    <span class="c1"># that start with 'a' in the list of words</span>
     <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span>
-    
     <span class="k">return</span> <span class="n">count</span>
 
-<span class="c1"># see above</span>
+<span class="c1">#HACKS</span>
 <span class="k">def</span> <span class="nf">count_words_starting_with_letter_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
     <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
