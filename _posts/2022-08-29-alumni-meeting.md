@@ -1,9 +1,8 @@
 ---
 toc: true
 layout: post
-description: Notes from 8/29/2022 Alumni Meeting
 categories: [T1 CSP Notes]
-title: 8/29 Alumni Meeting Notes
+title: Panel Notes
 comments: true
 ---
 
