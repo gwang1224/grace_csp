@@ -10,9 +10,9 @@ comments: true
 
 ### Kathyleen Beveridge
 Works on financing side
-1. HP Inc
-2. Qualcomm
-3. Thermo Fisher Scientific
+1. HP Inc: Here at HP we are committed to innovating and reinventing your digital life.
+2. Qualcomm: We make innovative products powered by ingenuity.
+3. Thermo Fisher Scientific: To enable our customers to make the world healthier, cleaner and safer.
 4. All statements promote innovation in technology and using technology for the public good
 5. Roles of scrum master are in corporations, project management is important to bring product to consumer to make 
 6. surfing doesn't earn you money
