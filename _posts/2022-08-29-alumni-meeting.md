@@ -47,6 +47,7 @@ Software Engineer, SRE, DevOps
 - whats the biggest challenge?
     - be adaptive can always rise to top
     - interviews are hard (are random timed tests)
+- work life balance: depends on the company
 
 
 
