@@ -42,7 +42,11 @@ Software Engineer, SRE, DevOps
 - machine learning runs experiments using NBS and could see analytics on the code that people are downloading to remove unused repositories (can delete unused repositories to save Qualcomm money)
 - what is a skill most useful in the tech industry?
     - continuous learning
-    - 
+    - have good listening skills and be able to translate to layman terms
+    - recognize how to use technology to solve real life skills
+- whats the biggest challenge?
+    - be adaptive can always rise to top
+    - interviews are hard (are random timed tests)
 
 
 
