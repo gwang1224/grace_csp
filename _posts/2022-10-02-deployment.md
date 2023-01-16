@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-categories: [Trimester 1]
+categories: [trimester 1]
 title: Deployment
 ---
 

@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: A minimal example of using markdown with fastpages.
-categories: [T1 CSP Notes]
+categories: [Important Reference]
 title: Markdown Post Tips
 ---
 # Grace's First Markdown Post 🤪

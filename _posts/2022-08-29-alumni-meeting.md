@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-categories: [T1 CSP Notes]
+categories: [Alumni Meetings]
 title: Panel Notes
 comments: true
 ---

@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: 
-categories: [Trimester 1]
+categories: [trimester 1]
 title: 1.1 Collaboration
 ---
 
