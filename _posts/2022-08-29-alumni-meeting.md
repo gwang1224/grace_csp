@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 categories: [Alumni Meetings]
 title: Panel Notes
 comments: true

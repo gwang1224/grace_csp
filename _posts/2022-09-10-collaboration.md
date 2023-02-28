@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 description: 
 categories: [trimester 1]
 title: 1.1 Collaboration

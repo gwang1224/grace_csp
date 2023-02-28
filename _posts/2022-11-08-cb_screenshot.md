@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 categories: [trimester 1]
 title: Trimester 1 College Board
 ---

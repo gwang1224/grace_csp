@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 categories: [trimester 1]
 title: Project Design
 ---

@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 categories: [trimester 2]
 title: Trimester 2 Tool Check
 ---

@@ -1,6 +1,6 @@
 ---
 title: Binary Conversion
-layout: default
+layout: base
 categories: [trimester 2]
 description: A Binary Math illustrative application using HTML and JavaScript. Converts binary to decimal, hexadecimal, octal, ASCII, and performs binary shift and color selection.
 

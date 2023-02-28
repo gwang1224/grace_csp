@@ -1,6 +1,6 @@
 ---
 title: Trimester 2 College Board Create Performace Task
-layout: default
+layout: base
 categories: [trimester 2]
 description: 
 toc: true
