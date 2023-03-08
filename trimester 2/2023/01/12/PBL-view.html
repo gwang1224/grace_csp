@@ -233,25 +233,25 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="cm">/*</span>
-<span class="cm">&lt;table&gt;</span>
-<span class="cm">    &lt;tr&gt;</span>
-<span class="cm">        &lt;th&gt;&lt;label for="name"&gt;Name&lt;/label&gt;&lt;/th&gt;</span>
-<span class="cm">        &lt;th&gt;&lt;label for="email"&gt;Email&lt;/label&gt;&lt;/th&gt;</span>
-<span class="cm">        &lt;th&gt;&lt;label for="password"&gt;Password&lt;/label&gt;&lt;/th&gt;</span>
-<span class="cm">        &lt;th&gt;&lt;label for="phone"&gt;Phone&lt;/label&gt;&lt;/th&gt;</span>
-<span class="cm">    &lt;/tr&gt;</span>
-<span class="cm">    &lt;tr&gt;</span>
-<span class="cm">        &lt;td&gt;&lt;input type="text" name="name" id="name" required&gt;&lt;/td&gt;</span>
-<span class="cm">        &lt;td&gt;&lt;input type="email" name="email" id="email" placeholder="abc@xyz.org" required&gt;&lt;/td&gt;</span>
-<span class="cm">        &lt;td&gt;&lt;input type="password" name="password" id="password" required&gt;&lt;/td&gt;</span>
-<span class="cm">        &lt;td&gt;&lt;input type="tel" name="phone_num" id="phone_num"</span>
-<span class="cm">            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"</span>
-<span class="cm">            placeholder="999-999-9999"&gt;&lt;/td&gt;</span>
-<span class="cm">        &lt;td &gt;&lt;button onclick="create_User()"&gt;Create&lt;/button&gt;&lt;/td&gt;</span>
-<span class="cm">    &lt;/tr&gt;</span>
-<span class="cm">&lt;/table&gt;</span>
-<span class="cm">*/</span>
+<div class=" highlight hl-python"><pre><span></span><span class="o">/*</span>
+<span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;&lt;</span><span class="n">label</span> <span class="k">for</span><span class="o">=</span><span class="s2">"name"</span><span class="o">&gt;</span><span class="n">Name</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;&lt;</span><span class="n">label</span> <span class="k">for</span><span class="o">=</span><span class="s2">"email"</span><span class="o">&gt;</span><span class="n">Email</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;&lt;</span><span class="n">label</span> <span class="k">for</span><span class="o">=</span><span class="s2">"password"</span><span class="o">&gt;</span><span class="n">Password</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;&lt;</span><span class="n">label</span> <span class="k">for</span><span class="o">=</span><span class="s2">"phone"</span><span class="o">&gt;</span><span class="n">Phone</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"name"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"name"</span> <span class="n">required</span><span class="o">&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"email"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"email"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"email"</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">"abc@xyz.org"</span> <span class="n">required</span><span class="o">&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"password"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"password"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"password"</span> <span class="n">required</span><span class="o">&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"tel"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"phone_num"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"phone_num"</span>
+            <span class="n">pattern</span><span class="o">=</span><span class="s2">"[0-9]</span><span class="si">{3}</span><span class="s2">-[0-9]</span><span class="si">{3}</span><span class="s2">-[0-9]</span><span class="si">{4}</span><span class="s2">"</span>
+            <span class="n">placeholder</span><span class="o">=</span><span class="s2">"999-999-9999"</span><span class="o">&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">td</span> <span class="o">&gt;&lt;</span><span class="n">button</span> <span class="n">onclick</span><span class="o">=</span><span class="s2">"create_User()"</span><span class="o">&gt;</span><span class="n">Create</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+<span class="o">*/</span>
 </pre></div>
 
     </div>
@@ -306,37 +306,37 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="cm">/*</span>
-<span class="cm">&lt;form action="create_User()"&gt;</span>
-<span class="cm">    &lt;p&gt;&lt;label&gt;</span>
-<span class="cm">        Name:</span>
-<span class="cm">        &lt;input type="text" name="name" id="name" required&gt;</span>
-<span class="cm">    &lt;/label&gt;&lt;/p&gt;</span>
-<span class="cm">    &lt;p&gt;&lt;label&gt;</span>
-<span class="cm">        User ID:</span>
-<span class="cm">        &lt;input type="text" name="uid" id="uid" required&gt;</span>
-<span class="cm">    &lt;/label&gt;&lt;/p&gt;</span>
-<span class="cm">    &lt;p&gt;&lt;label&gt;</span>
-<span class="cm">        Password:</span>
-<span class="cm">        &lt;input type="password" name="password" id="password" required&gt;</span>
-<span class="cm">        Verify Password:</span>
-<span class="cm">        &lt;input type="password" name="passwordV" id="passwordV" required&gt;</span>
-<span class="cm">    &lt;/label&gt;&lt;/p&gt;</span>
-<span class="cm">    &lt;p&gt;&lt;label&gt;</span>
-<span class="cm">        Phone:</span>
-<span class="cm">        &lt;input type="tel" name="phone_num" id="phone_num"</span>
-<span class="cm">            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"</span>
-<span class="cm">            placeholder="999-999-9999"&gt;</span>
-<span class="cm">    &lt;/label&gt;&lt;/p&gt;</span>
-<span class="cm">    &lt;p&gt;&lt;label&gt;</span>
-<span class="cm">        Birthday:</span>
-<span class="cm">        &lt;input type="date" name="dob" id="dob"&gt;</span>
-<span class="cm">    &lt;/label&gt;&lt;/p&gt;</span>
-<span class="cm">    &lt;p&gt;</span>
-<span class="cm">        &lt;button&gt;Create&lt;/button&gt;</span>
-<span class="cm">    &lt;/p&gt;</span>
-<span class="cm">&lt;/form&gt;</span>
-<span class="cm">*/</span>
+<div class=" highlight hl-python"><pre><span></span><span class="o">/*</span>
+<span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s2">"create_User()"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">label</span><span class="o">&gt;</span>
+        <span class="n">Name</span><span class="p">:</span>
+        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"name"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"name"</span> <span class="n">required</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">label</span><span class="o">&gt;</span>
+        <span class="n">User</span> <span class="n">ID</span><span class="p">:</span>
+        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"uid"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"uid"</span> <span class="n">required</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">label</span><span class="o">&gt;</span>
+        <span class="n">Password</span><span class="p">:</span>
+        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"password"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"password"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"password"</span> <span class="n">required</span><span class="o">&gt;</span>
+        <span class="n">Verify</span> <span class="n">Password</span><span class="p">:</span>
+        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"password"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"passwordV"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"passwordV"</span> <span class="n">required</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">label</span><span class="o">&gt;</span>
+        <span class="n">Phone</span><span class="p">:</span>
+        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"tel"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"phone_num"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"phone_num"</span>
+            <span class="n">pattern</span><span class="o">=</span><span class="s2">"[0-9]</span><span class="si">{3}</span><span class="s2">-[0-9]</span><span class="si">{3}</span><span class="s2">-[0-9]</span><span class="si">{4}</span><span class="s2">"</span>
+            <span class="n">placeholder</span><span class="o">=</span><span class="s2">"999-999-9999"</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">label</span><span class="o">&gt;</span>
+        <span class="n">Birthday</span><span class="p">:</span>
+        <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"date"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"dob"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"dob"</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span><span class="n">Create</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+<span class="o">*/</span>
 </pre></div>
 
     </div>
@@ -406,56 +406,56 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">create_User</span><span class="p">(){</span>
-    <span class="c1">// extract data from inputs</span>
-    <span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"name"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">email</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"email"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">password</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"password"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">phone</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"phone"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">requestOptions</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="nx">method</span><span class="o">:</span> <span class="s1">'POST'</span><span class="p">,</span>
-        <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s1">'Content-Type'</span><span class="o">:</span> <span class="s1">'application/json'</span><span class="p">,</span>
-            <span class="s1">'Authorization'</span><span class="o">:</span> <span class="s1">'Bearer my-token'</span><span class="p">,</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">function</span> <span class="n">create_User</span><span class="p">(){</span>
+    <span class="o">//</span> <span class="n">extract</span> <span class="n">data</span> <span class="kn">from</span> <span class="nn">inputs</span>
+    <span class="n">const</span> <span class="n">name</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"name"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">const</span> <span class="n">email</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"email"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">const</span> <span class="n">password</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"password"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">const</span> <span class="n">phone</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"phone"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">const</span> <span class="n">requestOptions</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
+        <span class="n">headers</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span>
+            <span class="s1">'Authorization'</span><span class="p">:</span> <span class="s1">'Bearer my-token'</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">};</span>
-    <span class="c1">//url for Create API</span>
-    <span class="kr">const</span> <span class="nx">url</span><span class="o">=</span><span class="s1">'/crud_api/create/'</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s1">'/'</span> <span class="o">+</span> <span class="nx">email</span><span class="o">+</span> <span class="s1">'/'</span> <span class="o">+</span> <span class="nx">password</span> <span class="o">+</span> <span class="s1">'/'</span> <span class="o">+</span> <span class="nx">phone</span><span class="p">;</span>
-    <span class="c1">//Async fetch API call to the database to create a new user</span>
-    <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">requestOptions</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="c1">// prepare HTML search result container for new output</span>
-        <span class="kr">const</span> <span class="nx">resultContainer</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">);</span>
-        <span class="c1">// trap error response from Web API</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">!==</span> <span class="mf">200</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kr">const</span> <span class="nx">errorMsg</span> <span class="o">=</span> <span class="s1">'Database response error: '</span> <span class="o">+</span> <span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">errorMsg</span><span class="p">);</span>
-            <span class="c1">// Email must be unique, no duplicates allowed</span>
-            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"pswError"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span>
+    <span class="o">//</span><span class="n">url</span> <span class="k">for</span> <span class="n">Create</span> <span class="n">API</span>
+    <span class="n">const</span> <span class="n">url</span><span class="o">=</span><span class="s1">'/crud_api/create/'</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">'/'</span> <span class="o">+</span> <span class="n">email</span><span class="o">+</span> <span class="s1">'/'</span> <span class="o">+</span> <span class="n">password</span> <span class="o">+</span> <span class="s1">'/'</span> <span class="o">+</span> <span class="n">phone</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">Async</span> <span class="n">fetch</span> <span class="n">API</span> <span class="n">call</span> <span class="n">to</span> <span class="n">the</span> <span class="n">database</span> <span class="n">to</span> <span class="n">create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">user</span>
+    <span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">requestOptions</span><span class="p">)</span><span class="o">.</span><span class="n">then</span><span class="p">(</span><span class="n">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="o">//</span> <span class="n">prepare</span> <span class="n">HTML</span> <span class="n">search</span> <span class="n">result</span> <span class="n">container</span> <span class="k">for</span> <span class="n">new</span> <span class="n">output</span>
+        <span class="n">const</span> <span class="n">resultContainer</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">);</span>
+        <span class="o">//</span> <span class="n">trap</span> <span class="n">error</span> <span class="n">response</span> <span class="kn">from</span> <span class="nn">Web</span> <span class="n">API</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">!==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">const</span> <span class="n">errorMsg</span> <span class="o">=</span> <span class="s1">'Database response error: '</span> <span class="o">+</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">;</span>
+            <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">errorMsg</span><span class="p">);</span>
+            <span class="o">//</span> <span class="n">Email</span> <span class="n">must</span> <span class="n">be</span> <span class="n">unique</span><span class="p">,</span> <span class="n">no</span> <span class="n">duplicates</span> <span class="n">allowed</span>
+            <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"pswError"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span>
                 <span class="s2">"Email already exists in the table"</span><span class="p">;</span>
             <span class="k">return</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="c1">// response contains valid result</span>
-        <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-            <span class="c1">//add a table row for the new/created userId</span>
-            <span class="kr">const</span> <span class="nx">tr</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"tr"</span><span class="p">);</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="nx">key</span> <span class="o">!==</span> <span class="s1">'query'</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="c1">//create a DOM element for the data(cells) in table rows</span>
-                    <span class="kr">const</span> <span class="nx">td</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
-                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
-                    <span class="c1">//truncate the displayed password to length 20</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="nx">key</span> <span class="o">===</span> <span class="s1">'password'</span><span class="p">){</span>
-                        <span class="nx">td</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">data</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">substring</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">17</span><span class="p">)</span><span class="o">+</span><span class="s2">"..."</span><span class="p">;</span>
+        <span class="o">//</span> <span class="n">response</span> <span class="n">contains</span> <span class="n">valid</span> <span class="n">result</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">then</span><span class="p">(</span><span class="n">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+            <span class="o">//</span><span class="n">add</span> <span class="n">a</span> <span class="n">table</span> <span class="n">row</span> <span class="k">for</span> <span class="n">the</span> <span class="n">new</span><span class="o">/</span><span class="n">created</span> <span class="n">userId</span>
+            <span class="n">const</span> <span class="n">tr</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"tr"</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">key</span> <span class="o">!==</span> <span class="s1">'query'</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="o">//</span><span class="n">create</span> <span class="n">a</span> <span class="n">DOM</span> <span class="n">element</span> <span class="k">for</span> <span class="n">the</span> <span class="n">data</span><span class="p">(</span><span class="n">cells</span><span class="p">)</span> <span class="ow">in</span> <span class="n">table</span> <span class="n">rows</span>
+                    <span class="n">const</span> <span class="n">td</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+                    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]);</span>
+                    <span class="o">//</span><span class="n">truncate</span> <span class="n">the</span> <span class="n">displayed</span> <span class="n">password</span> <span class="n">to</span> <span class="n">length</span> <span class="mi">20</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">key</span> <span class="o">===</span> <span class="s1">'password'</span><span class="p">){</span>
+                        <span class="n">td</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">17</span><span class="p">)</span><span class="o">+</span><span class="s2">"..."</span><span class="p">;</span>
                     <span class="p">}</span>
                     <span class="k">else</span><span class="p">{</span>
-                        <span class="nx">td</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">data</span><span class="p">[</span><span class="nx">key</span><span class="p">];}</span>
-                    <span class="c1">//add the DOM data element to the row</span>
-                    <span class="nx">tr</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">td</span><span class="p">);</span>
+                        <span class="n">td</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">];}</span>
+                    <span class="o">//</span><span class="n">add</span> <span class="n">the</span> <span class="n">DOM</span> <span class="n">data</span> <span class="n">element</span> <span class="n">to</span> <span class="n">the</span> <span class="n">row</span>
+                    <span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">td</span><span class="p">);</span>
                 <span class="p">}</span>
             <span class="p">}</span>
-            <span class="c1">//append the DOM row to the table</span>
-            <span class="nx">table</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tr</span><span class="p">);</span>
+            <span class="o">//</span><span class="n">append</span> <span class="n">the</span> <span class="n">DOM</span> <span class="n">row</span> <span class="n">to</span> <span class="n">the</span> <span class="n">table</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">tr</span><span class="p">);</span>
         <span class="p">})</span>
     <span class="p">})</span>
 <span class="p">}</span>
@@ -494,71 +494,71 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="cm">/*</span>
-<span class="cm">&lt;table&gt;</span>
-<span class="cm">  &lt;thead&gt;</span>
-<span class="cm">  &lt;tr&gt;</span>
-<span class="cm">    &lt;th&gt;Name&lt;/th&gt;</span>
-<span class="cm">    &lt;th&gt;ID&lt;/th&gt;</span>
-<span class="cm">    &lt;th&gt;Actions&lt;/th&gt;</span>
-<span class="cm">  &lt;/tr&gt;</span>
-<span class="cm">  &lt;/thead&gt;</span>
-<span class="cm">  &lt;tbody id="table"&gt;</span>
-<span class="cm">    &lt;!-- javascript generated data --&gt;</span>
-<span class="cm">  &lt;/tbody&gt;</span>
-<span class="cm">&lt;/table&gt;</span>
-<span class="cm">*/</span>
+<div class=" highlight hl-python"><pre><span></span><span class="o">/*</span>
+<span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">thead</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Name</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">ID</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Actions</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">thead</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">tbody</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"table"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">javascript</span> <span class="n">generated</span> <span class="n">data</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;/</span><span class="n">tbody</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+<span class="o">*/</span>
 
-<span class="c1">// Static json, this can be used to test data prior to API and Model being ready</span>
-<span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="s1">'[{"_name": "Thomas Edison", "_uid": "toby"}, {"_name": "Nicholas Tesla", "_uid": "nick"}, {"_name": "John Mortensen", "_uid": "jm1021"}, {"_name": "Eli Whitney", "_uid": "eli"}, {"_name": "Hedy Lemarr", "_uid": "hedy"}]'</span><span class="p">;</span>
+<span class="o">//</span> <span class="n">Static</span> <span class="n">json</span><span class="p">,</span> <span class="n">this</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">test</span> <span class="n">data</span> <span class="n">prior</span> <span class="n">to</span> <span class="n">API</span> <span class="ow">and</span> <span class="n">Model</span> <span class="n">being</span> <span class="n">ready</span>
+<span class="n">const</span> <span class="n">json</span> <span class="o">=</span> <span class="s1">'[{"_name": "Thomas Edison", "_uid": "toby"}, {"_name": "Nicholas Tesla", "_uid": "nick"}, {"_name": "John Mortensen", "_uid": "jm1021"}, {"_name": "Eli Whitney", "_uid": "eli"}, {"_name": "Hedy Lemarr", "_uid": "hedy"}]'</span><span class="p">;</span>
 
-<span class="c1">// Convert JSON string to JSON object</span>
-<span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">Convert</span> <span class="n">JSON</span> <span class="n">string</span> <span class="n">to</span> <span class="n">JSON</span> <span class="nb">object</span>
+<span class="n">const</span> <span class="n">data</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
 
-<span class="c1">// prepare HTML result container for new output</span>
-<span class="kr">const</span> <span class="nx">table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"table"</span><span class="p">);</span>
-<span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">user</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// build a row for each user</span>
-    <span class="kr">const</span> <span class="nx">tr</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"tr"</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">prepare</span> <span class="n">HTML</span> <span class="n">result</span> <span class="n">container</span> <span class="k">for</span> <span class="n">new</span> <span class="n">output</span>
+<span class="n">const</span> <span class="n">table</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"table"</span><span class="p">);</span>
+<span class="n">data</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="n">user</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">build</span> <span class="n">a</span> <span class="n">row</span> <span class="k">for</span> <span class="n">each</span> <span class="n">user</span>
+    <span class="n">const</span> <span class="n">tr</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"tr"</span><span class="p">);</span>
 
-    <span class="c1">// td's to build out each column of data</span>
-    <span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+    <span class="o">//</span> <span class="n">td</span><span class="s1">'s to build out each column of data</span>
+    <span class="n">const</span> <span class="n">name</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+    <span class="n">const</span> <span class="nb">id</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+    <span class="n">const</span> <span class="n">action</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
            
-    <span class="c1">// add content from user data          </span>
-    <span class="nx">name</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">_name</span><span class="p">;</span> 
-    <span class="nx">id</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">_uid</span><span class="p">;</span> 
+    <span class="o">//</span> <span class="n">add</span> <span class="n">content</span> <span class="kn">from</span> <span class="nn">user</span> <span class="n">data</span>          
+    <span class="n">name</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">_name</span><span class="p">;</span> 
+    <span class="nb">id</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">_uid</span><span class="p">;</span> 
 
-    <span class="c1">// add action for update button</span>
-    <span class="kd">var</span> <span class="nx">updateBtn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'input'</span><span class="p">);</span>
-    <span class="nx">updateBtn</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s2">"button"</span><span class="p">;</span>
-    <span class="nx">updateBtn</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="s2">"button"</span><span class="p">;</span>
-    <span class="nx">updateBtn</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">"Update"</span><span class="p">;</span>
-    <span class="nx">updateBtn</span><span class="p">.</span><span class="nx">style</span> <span class="o">=</span> <span class="s2">"margin-right:16px"</span><span class="p">;</span>
-    <span class="nx">updateBtn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="nx">alert</span><span class="p">(</span><span class="s2">"Update: "</span> <span class="o">+</span> <span class="nx">user</span><span class="p">.</span><span class="nx">_uid</span><span class="p">);</span>
+    <span class="o">//</span> <span class="n">add</span> <span class="n">action</span> <span class="k">for</span> <span class="n">update</span> <span class="n">button</span>
+    <span class="n">var</span> <span class="n">updateBtn</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">'input'</span><span class="p">);</span>
+    <span class="n">updateBtn</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s2">"button"</span><span class="p">;</span>
+    <span class="n">updateBtn</span><span class="o">.</span><span class="n">className</span> <span class="o">=</span> <span class="s2">"button"</span><span class="p">;</span>
+    <span class="n">updateBtn</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">"Update"</span><span class="p">;</span>
+    <span class="n">updateBtn</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="s2">"margin-right:16px"</span><span class="p">;</span>
+    <span class="n">updateBtn</span><span class="o">.</span><span class="n">onclick</span> <span class="o">=</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="n">alert</span><span class="p">(</span><span class="s2">"Update: "</span> <span class="o">+</span> <span class="n">user</span><span class="o">.</span><span class="n">_uid</span><span class="p">);</span>
     <span class="p">};</span>
-    <span class="nx">action</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">updateBtn</span><span class="p">);</span>
+    <span class="n">action</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">updateBtn</span><span class="p">);</span>
 
-    <span class="c1">// add action for delete button</span>
-    <span class="kd">var</span> <span class="nx">deleteBtn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'input'</span><span class="p">);</span>
-    <span class="nx">deleteBtn</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s2">"button"</span><span class="p">;</span>
-    <span class="nx">deleteBtn</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="s2">"button"</span><span class="p">;</span>
-    <span class="nx">deleteBtn</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">"Delete"</span><span class="p">;</span>
-    <span class="nx">deleteBtn</span><span class="p">.</span><span class="nx">style</span> <span class="o">=</span> <span class="s2">"margin-right:16px"</span>
-    <span class="nx">deleteBtn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="nx">alert</span><span class="p">(</span><span class="s2">"Delete: "</span> <span class="o">+</span> <span class="nx">user</span><span class="p">.</span><span class="nx">_uid</span><span class="p">);</span>
+    <span class="o">//</span> <span class="n">add</span> <span class="n">action</span> <span class="k">for</span> <span class="n">delete</span> <span class="n">button</span>
+    <span class="n">var</span> <span class="n">deleteBtn</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">'input'</span><span class="p">);</span>
+    <span class="n">deleteBtn</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s2">"button"</span><span class="p">;</span>
+    <span class="n">deleteBtn</span><span class="o">.</span><span class="n">className</span> <span class="o">=</span> <span class="s2">"button"</span><span class="p">;</span>
+    <span class="n">deleteBtn</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">"Delete"</span><span class="p">;</span>
+    <span class="n">deleteBtn</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="s2">"margin-right:16px"</span>
+    <span class="n">deleteBtn</span><span class="o">.</span><span class="n">onclick</span> <span class="o">=</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="n">alert</span><span class="p">(</span><span class="s2">"Delete: "</span> <span class="o">+</span> <span class="n">user</span><span class="o">.</span><span class="n">_uid</span><span class="p">);</span>
     <span class="p">};</span>
-    <span class="nx">action</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">deleteBtn</span><span class="p">);</span>  
+    <span class="n">action</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">deleteBtn</span><span class="p">);</span>  
 
-    <span class="c1">// add data to row</span>
-    <span class="nx">tr</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
-    <span class="nx">tr</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
-    <span class="nx">tr</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">action</span><span class="p">);</span>
+    <span class="o">//</span> <span class="n">add</span> <span class="n">data</span> <span class="n">to</span> <span class="n">row</span>
+    <span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+    <span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="nb">id</span><span class="p">);</span>
+    <span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">action</span><span class="p">);</span>
 
-    <span class="c1">// add row to table</span>
-    <span class="nx">table</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tr</span><span class="p">);</span>
+    <span class="o">//</span> <span class="n">add</span> <span class="n">row</span> <span class="n">to</span> <span class="n">table</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">tr</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 
