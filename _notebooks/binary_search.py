@@ -62,3 +62,10 @@ print(f"You guessed the number in {num_guesses} guesses!")
 #     print(f"Guess a number between {lower_bound} and {upper_bound}.")
 
 # print(f"You guessed the number in {num_guesses} guesses!")
+
+
+
+
+
+robotGlobalXCoordinatePosition = robotGlobalXCoordinatePosition + (Δx*Math.cos(robotOrientationRadians) - Δy*Math.sin(robotOrientationRadians));
+robotGlobalYCoordinatePosition = robotGlobalYCoordinatePosition + (Δx*Math.sin(robotOrientationRadians) + Δy*Math.cos(robotOrientationRadians));
