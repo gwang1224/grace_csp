@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -205,18 +205,17 @@ window.onload = wrap_img;
 </blockquote>
 <p>Describe some of the meta data and considerations when managing Image files.  Describe how these relate to Data Compression ...</p>
 <ul>
-<li>File Type, PNG and JPG are two types used in this lab
-<span style="color:blue"> Not every file format can be compressed, resized, etc. in the same way. For example, jpg and png files could not employ the same kind of compression technique.</span>
-</li>
-<li>Size, height and width, number of pixels<ul>
-<li>Size, height, width, and resolution can be changed when compressing images.</li>
+<li>File Type, PNG and JPG are two types used in this lab</li>
 </ul>
-</li>
-<li>Visual perception, lossy compression<ul>
-<li>In lossy compression, the data in a file is removed by sacrificing visual perception and not restored to its original form after decompression. The image will appear less clear.</li>
+<p><span style="color:blue"> Not every file format can be compressed, resized, etc. in the same way. For example, jpg and png files could not employ the same kind of compression technique.</span></p>
+<ul>
+<li>Size, height and width, number of pixels</li>
 </ul>
-</li>
+<p><span style="color:blue">Size, height, width, and resolution can be changed when compressing images.</span></p>
+<ul>
+<li>Visual perception, lossy compression</li>
 </ul>
+<p><span style="color:blue">In lossy compression, the data in a file is removed by sacrificing visual perception and not restored to its original form after decompression. The image will appear less clear.</span></p>
 
 </div>
 </div>
@@ -257,31 +256,22 @@ chdir
 ren
 </pre></div>
 <ul>
-<li>
-<p>What are some of the major differences?</p>
+<li>What are some of the major differences?</li>
+</ul>
+<p><span style="color:blue">Windows has a different file structure as mac. Mac has a directory tree. Windows stores in windows registry. Files created on a Windows machine may not be compatible with macOS and vice versa.</span>
+Provide what you observed, struggled with, or leaned while playing with this code.</p>
 <ul>
-<li>Windows has a different file structure as mac. Mac has a directory tree. Windows stores in windows registry. Files created on a Windows machine may not be compatible with macOS and vice versa.</li>
+<li>Why is path a big deal when working with images?</li>
 </ul>
-</li>
-</ul>
-<p>Provide what you observed, struggled with, or leaned while playing with this code.</p>
+<p><span style="color:blue">Path is a big deal because it is important to know the location of the image.</span></p>
 <ul>
-<li>
-<p>Why is path a big deal when working with images?</p>
+<li>How does the meta data source and label relate to Unit 5 topics?</li>
+</ul>
+<p><span style="color:blue">Meta data source and label relate to the Unit 5 topics of compression by because metadata contains information about compression.</span></p>
 <ul>
-<li>Path is a big deal because it is important to know the location of the image.</li>
+<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</li>
 </ul>
-</li>
-<li>
-<p>How does the meta data source and label relate to Unit 5 topics?</p>
-<ul>
-<li>Meta data source and label relate to the Unit 5 topics of compression by because metadata contains information about compression.</li>
-</ul>
-</li>
-<li>
-<p>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</p>
-</li>
-</ul>
+<p><span style="color:blue">In Jupyter Notebooks, IPython provides a kernel that allows Python code to be executed within the notebook environment and creates interactive data analysis and visualization workflows using Pandas. For images, IPython provides the ability to display images within the notebook environment using the Image class without the need for external image editing tools.</span></p>
 
 </div>
 </div>
@@ -331,8 +321,7 @@ ren
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Reading-and-Encoding-Images-(2-implementations-follow)">
 <a class="anchor" href="#Reading-and-Encoding-Images-(2-implementations-follow)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading and Encoding Images (2 implementations follow)<a class="anchor-link" href="#Reading-and-Encoding-Images-(2-implementations-follow)"> </a>
@@ -348,10 +337,13 @@ ren
 </h3>
 <blockquote>
 <p>Image formats (JPG, PNG) are often called <strong>*Binary File formats</strong>, it is difficult to pass these over HTTP.   Thus, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> converts binary encoded data (8-bit, ASCII/Unicode) into a text encoded scheme (24 bits, 6-bit Base64 digits).  Thus base64 is used to transport and embed binary images into textual assets such as HTML and CSS.- How is Base64 similar or different to Binary and Hexadecimal?</p>
+</blockquote>
+<p><span style="color:blue">Binary is a base-2 number system that uses only two symbols, 0 and 1, to represent data. Each digit in a binary number represents a power of 2, and the value of the number is the sum of these powers. Binary is used in computing and digital systems, as it is a simple and efficient way of representing and manipulating data.&lt;/p&gt;
+<p>Hexadecimal is a base-16 number system that uses 16 symbols, 0-9 and A-F, to represent data. Each digit in a hexadecimal number represents a power of 16, and the value of the number is the sum of these powers. Hexadecimal is commonly used in computing and programming, as it provides a compact and human-readable way of representing large binary numbers.&lt;/span&gt;</p>
 <ul>
 <li>Translate first 3 letters of your name to Base64.</li>
 </ul>
-</blockquote>
+<p><span style="color:blue">Gra -&gt; Z3Jh</span></p>
 <h3 id="numpy">
 <a class="anchor" href="#numpy" aria-hidden="true"><span class="octicon octicon-link"></span></a>numpy<a class="anchor-link" href="#numpy"> </a>
 </h3>
@@ -365,14 +357,21 @@ ren
 <p>Input and Output (I/O) is a fundamental of all Computer Programming. Input/output (I/O) buffering is a technique used to optimize I/O operations.  In large quantities of data, how many frames of input the server currently has queued is the buffer.  In this example, there is a very large picture that lags.</p>
 <ul>
 <li>Where have you been a consumer of buffering?  </li>
-<li>From your consumer experience, what effects have you experienced from buffering?  </li>
-<li>How do these effects apply to images?</li>
 </ul>
 </blockquote>
+<p><span style="color:blue">I have been a consumer of buffering when watching youtube. On youtube, when my internet connection is bad, the video will keep loading and will not play very well.</span></p>
+<ul>
+<li>From your consumer experience, what effects have you experienced from buffering?  </li>
+</ul>
+<p><span style="color:blue">From buffering, the video often lags very consistently, making me very impatient. This creates a bad video watching experience, it makes me very impatient.</span></p>
+<ul>
+<li>How do these effects apply to images?</li>
+</ul>
+<p><span style="color:blue">Given that many frames must be loaded in images, extremely large pictures may buffer.</span></p>
 
-</div>
-</div>
-</div>
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -722,8 +721,13 @@ ren
 </div>
 </div>
 </div>
-</div>
+&lt;/div&gt;
+ 
 
+</span></p>
+</div>
+</div></div>
+</div>
 
 
   </div><a class="u-url" href="/repository_1/trimester%203/2023/03/08/AP-2-2.html" hidden></a>
