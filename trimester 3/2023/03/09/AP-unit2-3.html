@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      15 min read
     
 </span></p>
 
@@ -160,6 +160,7 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h1"><a href="#Example-of-larger-data-set">Example of larger data set </a></li>
 <li class="toc-entry toc-h1"><a href="#APIs-are-a-Source-for-Writing-Programs-with-Data">APIs are a Source for Writing Programs with Data </a></li>
+<li class="toc-entry toc-h1"><a href="#College-Board-Quizzes">College Board Quizzes </a></li>
 <li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Hack-Helpers">Hack Helpers </a>
@@ -846,6 +847,237 @@ None
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="College-Board-Quizzes">
+<a class="anchor" href="#College-Board-Quizzes" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board Quizzes<a class="anchor-link" href="#College-Board-Quizzes"> </a>
+</h1>
+<p><img src="/repository_1/images/copied_from_nb/images/programs_data.png" alt="Programs Data Quiz"></p>
+<p><img src="/repository_1/images/copied_from_nb/images/extracting_information.png" alt="Extracting Data"></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c1"># open the input TSV file for reading</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'files/gene_x_sample.tsv'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">tsv_file</span><span class="p">:</span>
+    <span class="c1"># create a CSV writer for writing to the output file</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'files/gene_x_sample.csv'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
+        <span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csv_file</span><span class="p">)</span>
+
+        <span class="c1"># read each line of the TSV file and write it as a row in the CSV file</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">tsv_file</span><span class="p">:</span>
+            <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Does it have a good sample size?</p>
+<ul>
+<li>Yes</li>
+</ul>
+</li>
+<li>
+<p>Is there bias in the data?</p>
+<ul>
+<li>No</li>
+</ul>
+</li>
+<li>
+<p>Does the data set need to be cleaned?</p>
+<ul>
+<li>No</li>
+</ul>
+</li>
+<li>
+<p>What is the purpose of the data set?</p>
+<ul>
+<li>The purpose of the dataset is to provide biological insight</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_bio</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/gene_x_sample.csv'</span><span class="p">)</span>
+
+<span class="c1"># print(df_bio.head(10))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_bio</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>         Gene  GSM158635  GSM158636  GSM158637  GSM158638    GSM158639  \
+0        A1CF      574.0      790.0     1593.0     1063.0   493.000000   
+1         A2M     1193.0      148.0     4485.0      609.0  3564.000000   
+2      A4GALT       96.0       97.0       34.0      102.0    64.666667   
+3       A4GNT      228.0      296.0      150.0      336.0   210.000000   
+4        AAAS      150.0      266.0      334.0      229.0   344.333333   
+...       ...        ...        ...        ...        ...          ...   
+12269    ZXDB        6.0       97.0       -8.0       74.0    19.333333   
+12270    ZXDC       54.0      103.0       64.0      -78.0   284.666667   
+12271     ZYX      424.0      274.0      396.0      929.0  2165.000000   
+12272   ZZEF1      802.0      670.0      914.0      579.0  1058.333333   
+12273    ZZZ3     1316.0     1885.0      586.0     1839.0  1709.000000   
+
+         GSM158640    GSM158641    GSM158642    GSM158643  
+0       566.666667   776.333333   520.666667   567.000000  
+1      2377.000000    73.666667    70.000000   306.000000  
+2        82.666667    96.333333   103.333333   104.333333  
+3       204.333333   276.000000   293.333333   234.666667  
+4       291.000000   414.000000   242.333333   260.666667  
+...            ...          ...          ...          ...  
+12269   -10.666667    16.000000     9.333333    19.333333  
+12270   525.666667    28.666667   197.666667   152.000000  
+12271   934.666667   159.666667   532.000000   422.333333  
+12272   768.333333   735.333333   569.666667   399.666667  
+12273  2999.666667  2222.333333  4253.000000  2697.333333  
+
+[12274 rows x 10 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_bio</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'GSM158640'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>         Gene  GSM158635  GSM158636  GSM158637  GSM158638     GSM158639  \
+142      ACTB    66044.0    66266.0    47487.0    54983.0  63634.000000   
+9203    RPS3A    65289.0    58770.0    55332.0    70352.0  61854.666670   
+9154    RPL41    75078.0    83695.0    78269.0    75828.0  66391.333330   
+8191     PPIA    45134.0    32582.0    44047.0    44191.0  57696.666670   
+9148   RPL37A    79417.0    92587.0    86380.0    82165.0  71138.666670   
+...       ...        ...        ...        ...        ...           ...   
+2372   CRYBB3     -240.0     -291.0     -324.0     -344.0   -330.666667   
+3620     FBP2     -434.0     -244.0     -222.0     -256.0   -357.666667   
+5807     LIPC     -357.0     -254.0     -232.0     -316.0   -253.000000   
+4082    GFRA4     -260.0     -242.0     -236.0     -235.0   -343.666667   
+7910  PITPNM3     -358.0     -224.0     -191.0     -171.0   -294.666667   
+
+         GSM158640     GSM158641     GSM158642     GSM158643  
+142   74800.000000  58643.333330  68894.666670  64822.333330  
+9203  71366.333330  47161.333330  66355.000000  73795.333330  
+9154  69832.000000  78345.333330  72722.000000  70579.333330  
+8191  69819.666670  50736.000000  60732.000000  56457.333330  
+9148  68614.666670  88013.666670  71241.000000  73157.000000  
+...            ...           ...           ...           ...  
+2372   -353.666667   -379.333333   -374.666667   -275.666667  
+3620   -374.333333   -352.000000   -313.000000   -295.666667  
+5807   -375.000000   -262.333333   -339.333333   -279.333333  
+4082   -383.333333   -269.666667   -333.333333   -255.333333  
+7910   -399.666667   -336.333333   -193.666667   -199.000000  
+
+[12274 rows x 10 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_bio</span><span class="p">[</span><span class="n">df_bio</span><span class="o">.</span><span class="n">GSM158640</span> <span class="o">==</span> <span class="n">df_bio</span><span class="o">.</span><span class="n">GSM158640</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df_bio</span><span class="p">[</span><span class="n">df_bio</span><span class="o">.</span><span class="n">GSM158640</span> <span class="o">==</span> <span class="n">df_bio</span><span class="o">.</span><span class="n">GSM158640</span><span class="o">.</span><span class="n">min</span><span class="p">()])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     Gene  GSM158635  GSM158636  GSM158637  GSM158638  GSM158639  GSM158640  \
+142  ACTB    66044.0    66266.0    47487.0    54983.0    63634.0    74800.0   
+
+       GSM158641    GSM158642    GSM158643  
+142  58643.33333  68894.66667  64822.33333  
+         Gene  GSM158635  GSM158636  GSM158637  GSM158638   GSM158639  \
+7910  PITPNM3     -358.0     -224.0     -191.0     -171.0 -294.666667   
+
+       GSM158640   GSM158641   GSM158642  GSM158643  
+7910 -399.666667 -336.333333 -193.666667     -199.0  
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
