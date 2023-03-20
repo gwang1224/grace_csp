@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      10 min read
     
 </span></p>
 
@@ -187,10 +187,29 @@ window.onload = wrap_img;
 <p>Uses PRAGMA statement to read schema.</p>
 </blockquote>
 <p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema?</p>
+
+<pre><code>- &lt;span style="color:blue"&gt; A database schema is a blueprint or a plan that outlines the logical and physical structure of a database. It defines how the data is organized, stored, and accessed within the database. The schema defines the tables, columns, data types, relationships between tables, constraints, and indexes in the database. &lt;/span&gt;
+
+</code></pre>
 <ul>
-<li>What is the purpose of identity Column in SQL database?</li>
-<li>What is the purpose of a primary key in SQL database?</li>
-<li>What are the Data Types in SQL table?</li>
+<li>
+<p>What is the purpose of identity Column in SQL database?</p>
+<ul>
+<li><span style="color:blue"> An identity column in SQL database is a column that automatically generates unique numeric values for each row in a table. The purpose of an identity column is to provide a unique and sequential identifier for each record in the table, which can be used as a primary key or a foreign key in other tables. </span></li>
+</ul>
+</li>
+<li>
+<p>What is the purpose of a primary key in SQL database?</p>
+<ul>
+<li><span style="color:blue"> A primary key in SQL database ensures uniqueness and data integrity, and enables referencing of records in other tables.</span></li>
+</ul>
+</li>
+<li>
+<p>What are the Data Types in SQL table?</p>
+<ul>
+<li><span style="color:blue"> SQL tables support numeric and character string data types, including INT, BIGINT, DECIMAL, FLOAT, CHAR, VARCHAR, and TEXT.</span></li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -245,10 +264,28 @@ window.onload = wrap_img;
 <p>Uses SQL SELECT statement to read data</p>
 </blockquote>
 <ul>
-<li>What is a connection object?  After you google it, what do you think it does?</li>
-<li>Same for cursor object?</li>
-<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</li>
-<li>Is "results" an object?  How do you know?</li>
+<li>What is a connection object?  After you google it, what do you think it does?<ul>
+<li><span style="color:blue"> A connection object represents a connection to a database, used to authenticate the user and execute queries or commands against the database. </span></li>
+</ul>
+</li>
+<li>
+<p>Same for cursor object?</p>
+<ul>
+<li><span style="color:blue"> A cursor object is an object in programming used to traverse and manipulate the results of a database query, typically one row at a time. </span></li>
+</ul>
+</li>
+<li>
+<p>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</p>
+<ul>
+<li><span style="color:blue"> Special variables, function variables, class variables, in transaction, isolation level, row factory, and total changes are some of the properties included in the conn object. Special variables, function variables, arraysize, connection, description, lastrowid, row factory, and rowcount are some of the properties that make up the cursor object. </span></li>
+</ul>
+</li>
+<li>
+<p>Is "results" an object?  How do you know?</p>
+<ul>
+<li><span style="color:blue"> Yes it is an object because it is cursor.execute(), which is an object. </span></li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -303,8 +340,15 @@ window.onload = wrap_img;
 <blockquote>
 <p>Uses SQL INSERT to add row</p>
 <ul>
-<li>Compore create() in both SQL lessons.  What is better or worse in the two implementations?</li>
-<li>Explain purpose of SQL INSERT.   Is this the same as User <strong>init</strong>?</li>
+<li>Compare create() in both SQL lessons. What is better or worse in the two implementations?<ul>
+<li>
+<span style="color:blue"> The create function in 2.4a uses SQLite database to input user data to create the new users. The create function of 2.4b uses SQLAlchemy to create the new users. 2.4a function can be better used for more simple projects where as 2.4b function can be used for more complex projects. </span>    </li>
+</ul>
+</li>
+<li>Explain purpose of SQL INSERT. Is this the same as User <strong>init</strong>?<ul>
+<li><span style="color:blue"> SQL INSERT inserts new records. __init__ also creates new records. </span></li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
@@ -366,12 +410,23 @@ window.onload = wrap_img;
 </h2>
 <blockquote>
 <p>Uses SQL UPDATE to modify password</p>
-<ul>
-<li>What does the hacked part do?</li>
-<li>Explain try/except, when would except occur?</li>
-<li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
-</ul>
 </blockquote>
+<ul>
+<li>
+<p>What does the hacked part do?</p>
+<ul>
+<li>
+<span style="color:blue"> Verifies that the new password is at least two characters long. The code assumes that they were hacked if it is not. </span>- Explain try/except, when would except occur?</li>
+<li><span style="color:blue"> Try/except is like an if else statement. If the try doesn't work, the except occurs.</span></li>
+</ul>
+</li>
+<li>
+<p>What code seems to be repeated in each of these examples to point, why is it repeated?</p>
+<ul>
+<li><span style="color:blue"> Try/except is repeated. This is repeated because there are many different places where checking to ensure everything is inputted correctly is necessary. </span></li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -436,8 +491,14 @@ window.onload = wrap_img;
 <blockquote>
 <p>Uses a delete function to remove a user based on a user input of the id.</p>
 <ul>
-<li>Is DELETE a dangerous operation?  Why?</li>
-<li>What is the "f" and {uid} do?</li>
+<li>Is DELETE a dangerous operation?  Why?<ul>
+<li><span style="color:blue"> DELETE is a dangerous function because the records can not be recovered</span></li>
+</ul>
+</li>
+<li>What is the "f" and {uid} do?<ul>
+<li><span style="color:blue"> "f" and {uid} is an f string, where uid is printed in a string</span></li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
@@ -496,11 +557,17 @@ window.onload = wrap_img;
 </h1>
 <blockquote>
 <p>CRUD and Schema interactions from one location by running menu. Observe input at the top of VSCode, observe output underneath code cell.</p>
-<ul>
-<li>Why does the menu repeat?</li>
-<li>Could you refactor this menu?  Make it work with a List?</li>
-</ul>
 </blockquote>
+<ul>
+<li>Why does the menu repeat?<ul>
+<li><span style="color:blue"> The menu repeats because it is recursive. </span></li>
+</ul>
+</li>
+<li>Could you refactor this menu?  Make it work with a List?<ul>
+<li>Yes, you can make it a list with crud methods</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
