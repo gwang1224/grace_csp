@@ -235,7 +235,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Fetch results of Schema</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"PRAGMA table_info('users')"</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"PRAGMA table_info('scores')"</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
@@ -248,6 +248,22 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(0, 'id', 'INTEGER', 1, None, 1)
+(1, '_name', 'VARCHAR(255)', 1, None, 0)
+(2, '_uid', 'VARCHAR(255)', 1, None, 0)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -308,7 +324,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Execute a SELECT statement to retrieve data from a table</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM users'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM scores'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -325,6 +341,24 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, 'Grace', '10')
+(2, 'Claire', '10')
+(3, 'Claire', '10')
+(4, 'Annika', '10')
+(5, 'Mortensen', '10')
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -367,8 +401,6 @@ window.onload = wrap_img;
 <span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your name:"</span><span class="p">)</span>
     <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your user id:"</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your password"</span><span class="p">)</span>
-    <span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your date of birth 'YYYY-MM-DD'"</span><span class="p">)</span>
     
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -378,7 +410,7 @@ window.onload = wrap_img;
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Execute an SQL command to insert data into a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO users (_name, _uid, _password, _dob) VALUES (?, ?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">dob</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO users (_name, _uid) VALUES (?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">))</span>
         
         <span class="c1"># Commit the changes to the database</span>
         <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
@@ -442,12 +474,6 @@ window.onload = wrap_img;
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter user id to update"</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter updated password"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">"hacked"</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="s1">'gothackednewpassword123'</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">"successfully updated"</span>
 
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -604,6 +630,20 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Error while executing the INSERT: no such table: users
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
