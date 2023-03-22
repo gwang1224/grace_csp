@@ -350,34 +350,18 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(6, 'Grace', '8')
-(7, 'Grace', '5')
-(18, 'Shruthi', '6')
-(29, 'Grace', '8')
-(30, 'Claire', '6')
-(31, 'Claire', '3')
+<pre>(18, 'Shruthi', '6')
 (32, 'Annika', '9')
 (33, 'Mortensen', '4')
-(34, 'Grace', '8')
-(35, 'Claire', '6')
-(36, 'Claire', '3')
 (37, 'Annika', '9')
 (38, 'Mortensen', '4')
-(39, 'Grace', '8')
-(40, 'Claire', '6')
-(41, 'Claire', '3')
 (42, 'Annika', '9')
 (43, 'Mortensen', '4')
-(44, 'Grace', '8')
-(45, 'Claire', '6')
-(46, 'Claire', '3')
 (47, 'Annika', '9')
 (48, 'Mortensen', '4')
-(49, 'Grace', '8')
-(50, 'Claire', '6')
-(51, 'Claire', '3')
 (52, 'Annika', '9')
 (53, 'Mortensen', '4')
+(54, 'Lora', '10')
 </pre>
 </div>
 </div>
@@ -496,7 +480,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter user id to update"</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter user id to update"</span><span class="p">)</span>
 
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -506,12 +490,12 @@ window.onload = wrap_img;
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Execute an SQL command to update data in a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE users SET _password = ? WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">uid</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE scores SET _uid = ? WHERE _name = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># The uid was not found in the table</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No uid </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with user id </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> the password has been updated"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with user id </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> the password has been updated"</span><span class="p">)</span>
             <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
     <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the UPDATE:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
@@ -521,10 +505,24 @@ window.onload = wrap_img;
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="c1">#update()</span>
+<span class="n">update</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Error while executing the UPDATE: Incorrect number of bindings supplied. The current statement uses 2, and there are 4 supplied.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -662,28 +660,19 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with uid Grace was successfully deleted
+<pre>Error while executing the UPDATE: Incorrect number of bindings supplied. The current statement uses 2, and there are 4 supplied.
 (18, 'Shruthi', '6')
-(30, 'Claire', '6')
-(31, 'Claire', '3')
 (32, 'Annika', '9')
 (33, 'Mortensen', '4')
-(35, 'Claire', '6')
-(36, 'Claire', '3')
 (37, 'Annika', '9')
 (38, 'Mortensen', '4')
-(40, 'Claire', '6')
-(41, 'Claire', '3')
 (42, 'Annika', '9')
 (43, 'Mortensen', '4')
-(45, 'Claire', '6')
-(46, 'Claire', '3')
 (47, 'Annika', '9')
 (48, 'Mortensen', '4')
-(50, 'Claire', '6')
-(51, 'Claire', '3')
 (52, 'Annika', '9')
 (53, 'Mortensen', '4')
+(54, 'Lora', '10')
 </pre>
 </div>
 </div>

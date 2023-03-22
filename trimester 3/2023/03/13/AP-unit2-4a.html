@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -908,10 +908,24 @@ During handling of the above exception, another exception occurred:
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{"id": 7, "name": "Claire", "uid": "clairez", "dob": "09-02-2005", "age": 17}
-User clairez has been updated.
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 19</span> in <span class="ansi-cyan-fg">&lt;cell line: 23&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=19'&gt;20&lt;/a&gt;</span>         except:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span>             print(f"There was an problem in updating user {uid}")
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=22'&gt;23&lt;/a&gt;</span> update()
+
+<span class="ansi-green-intense-fg ansi-bold">/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 19</span> in <span class="ansi-cyan-fg">update</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> def update():
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span>     # optimize user time to see if uid exists
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span>     uid = input("Enter your user id:")
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span>     user = find_by_uid(uid)
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span>     if user is None:
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/gracewang/vscode/repository_1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span>         print(f"User {uid} is not found :(")
+
+<span class="ansi-red-fg">NameError</span>: name 'find_by_uid' is not defined</pre>
 </div>
 </div>
 
