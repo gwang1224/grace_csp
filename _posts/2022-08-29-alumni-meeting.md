@@ -6,6 +6,60 @@ title: Panel Notes
 comments: true
 ---
 
+# CSP Extra Credits
+
+## 3/28/2023 Cal State San Marcos
+
+### Ashley
+
+The speaker works in a Quantum Computing research lab at Cal State San Marcos. They chose Cal State San Marcos because it was one of the few CAL States that only had physics and they wanted to pursue physics as their degree. As a first-generation student pursuing STEM, they had a tough time and faced failures, but they did not let those failures define them. They got into research and it inspired them to go for a PhD. They will be starting their PhD in real science and engineering at UCSD this fall. The speaker mentions their failures to highlight that they never gave up and also praises Cal State San Marcos for being the perfect place for them to experience failure as they had a great support system.
+
+She is a very inspiring individual. I also want to pursue PhD, maybe at UCSD.
+
+### John
+
+The speaker is originally from Escondido and not from Palm Springs. During high school, he was a delinquent. He started attending Palomar College right after graduating from high school and spent three years there. They obtained two Associates degrees, one in math and physics and another in computer science. During the pandemic, they transferred to Cal State San Marcos.
+
+Interesting story. I don't consider myself a delinquent but going to community college seems like a good financial choice. Guy is a debt free college student. 
+
+### San Marcos
+
+1. Cybersecurity Club
+2. RObotics
+3. 3D printing club
+4. **Women in STEM**
+5. Society of Women Engineers
+6. Society of Physics Students
+
+<img src="https://cdn.discordapp.com/attachments/1068416415251570689/1090412015949979728/Screenshot_2023-03-28_at_4.07.34_PM.png">
+
+### Internships
+
+What is an internship?
+1. An internship is a period of work experience offered by an organization for a limited period of time.
+2. How do you find internship opportunities?
+    -  Join clubs! A lot of the time they offer internship opportunities available at nearby industries or even out of state/country.
+    - CHECK YOUR EMAILS! The department will constantly spam you with opportunities.
+    - Go to campus events; especially where people from local industries will be attending.
+    - Google is also your best friend - look up opportunities!
+3. Tips:   
+    - Try to avoid unpaid internships - you deserve to be paid for your work.
+    - Apply even if you feel underqualified - worst thing they can do is say no.
+    -  Ask faculty members for help regarding applications! They are more than happy to revise application essays.
+    - Go to the writing center on campus for help with applicator essays.
+
+
+### Paying for college
+
+1. There are two types of loans: subsidized and unsubsidized. Direct subsidized Loans and Direct Unsubsidized Loans are federal student loans offered by the US. Department of Education (ED) to help eligible students cover the cost of higher education at a four-year college or university, community college, or trade, career, or technical school.
+    - Subsidized loan does not accrue interest while you are in school at lease half-time or during deferment periods.
+    - Unsubsidized loan does accrue interest while you are in school and during grace periods.
+2. When do you have to pay back your loans?
+    - 6 months after you graduate, but there are options for those facing financial hardship or continuing onto graduate school.
+
+Applying to FAFSA
+
+
 ## 12/13/2022 Girls in CS Panel
 
 ### Kathyleen Beveridge
@@ -97,58 +151,4 @@ Note: PBL = Project-Based Learning
 4. Club at UCSD: Triton AI
 
 {% include alert.html text= "Have a good resume!" %}
-
-
-## 3/28/2023 Cal State San Marcos
-
-### Ashley
-
-The speaker works in a Quantum Computing research lab at Cal State San Marcos. They chose Cal State San Marcos because it was one of the few CAL States that only had physics and they wanted to pursue physics as their degree. As a first-generation student pursuing STEM, they had a tough time and faced failures, but they did not let those failures define them. They got into research and it inspired them to go for a PhD. They will be starting their PhD in real science and engineering at UCSD this fall. The speaker mentions their failures to highlight that they never gave up and also praises Cal State San Marcos for being the perfect place for them to experience failure as they had a great support system.
-
-She is a very inspiring individual. I also want to pursue PhD, maybe at UCSD.
-
-### John
-
-The speaker is originally from Escondido and not from Palm Springs. During high school, he was a delinquent. He started attending Palomar College right after graduating from high school and spent three years there. They obtained two Associates degrees, one in math and physics and another in computer science. During the pandemic, they transferred to Cal State San Marcos.
-
-Interesting story. I don't consider myself a delinquent but going to community college seems like a good financial choice. Guy is a debt free college student. 
-
-### San Marcos
-
-1. Cybersecurity Club
-2. RObotics
-3. 3D printing club
-4. **Women in STEM**
-5. Society of Women Engineers
-6. Society of Physics Students
-
-<img src="https://cdn.discordapp.com/attachments/1068416415251570689/1090412015949979728/Screenshot_2023-03-28_at_4.07.34_PM.png">
-
-### Internships
-
-What is an internship?
-1. An internship is a period of work experience offered by an organization for a limited period of time.
-2. How do you find internship opportunities?
-    -  Join clubs! A lot of the time they offer internship opportunities available at nearby industries or even out of state/country.
-    - CHECK YOUR EMAILS! The department will constantly spam you with opportunities.
-    - Go to campus events; especially where people from local industries will be attending.
-    - Google is also your best friend - look up opportunities!
-3. Tips:   
-    - Try to avoid unpaid internships - you deserve to be paid for your work.
-    - Apply even if you feel underqualified - worst thing they can do is say no.
-    -  Ask faculty members for help regarding applications! They are more than happy to revise application essays.
-    - Go to the writing center on campus for help with applicator essays.
-
-
-### Paying for college
-
-1. There are two types of loans: subsidized and unsubsidized. Direct subsidized Loans and Direct Unsubsidized Loans are federal student loans offered by the US. Department of Education (ED) to help eligible students cover the cost of higher education at a four-year college or university, community college, or trade, career, or technical school.
-    - Subsidized loan does not accrue interest while you are in school at lease half-time or during deferment periods.
-    - Unsubsidized loan does accrue interest while you are in school and during grace periods.
-2. When do you have to pay back your loans?
-    - 6 months after you graduate, but there are options for those facing financial hardship or continuing onto graduate school.
-
-Applying to FAFSA
-
-
 
