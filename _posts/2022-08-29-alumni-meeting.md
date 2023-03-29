@@ -59,6 +59,8 @@ What is an internship?
 
 Applying to FAFSA for money!
 
+
+My super cool toothbrush!
 <img src="https://cdn.discordapp.com/attachments/1068416415251570689/1090502363481116762/IMG_0378.jpg">
 
 ## 12/13/2022 Girls in CS Panel
