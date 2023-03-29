@@ -57,7 +57,7 @@ What is an internship?
 2. When do you have to pay back your loans?
     - 6 months after you graduate, but there are options for those facing financial hardship or continuing onto graduate school.
 
-Applying to FAFSA
+Applying to FAFSA for money!
 
 <img src="https://cdn.discordapp.com/attachments/1068416415251570689/1090502363481116762/IMG_0378.jpg">
 
