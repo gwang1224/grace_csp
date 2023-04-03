@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      7 min read
     
 </span></p>
 
@@ -803,10 +803,52 @@ Scaled size:  (320, 240)
 </h2>
 <blockquote>
 <p>AP Classroom. Provide answers and thoughts on theoritical question form college board Video in section 4.3.  They start at about the 9 minute mark.</p>
-<ul>
-<li>Example 1</li>
-<li>Example 2</li>
-</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/parallel_ex1.png" alt="Example 1"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In order to run 2 processes at the same time, this is how to the processes would run:</p>
+<p>1st processor- 10 seconds, 30 seconds</p>
+<p>2nd processor- 50 seconds</p>
+<p>Therefore, the maximum would be 50 seconds.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/parallel_ex2.png" alt="Example 2"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Running parallel: 25 second one finishes than 20 seconds still needed to finish the 45 second one.</p>
+<p>Total 45 seconds</p>
+<p>Running on 1 processor: 25+45=70 seconds</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
 <p>Data Structures.  Build a List Comprehension example</p>
 <ul>
 <li>list = [calc(item) for item in items]</li>
@@ -816,6 +858,205 @@ Scaled size:  (320, 240)
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">midnights</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"Lavender Haze"</span><span class="p">,</span>
+    <span class="s2">"Maroon"</span><span class="p">,</span>
+    <span class="s2">"Anti-Hero"</span><span class="p">,</span>
+    <span class="s2">"Snow on the Beach"</span><span class="p">,</span>
+    <span class="s2">"You're on Your Own Kids"</span><span class="p">,</span>
+    <span class="s2">"Midnight Rain"</span><span class="p">,</span>
+    <span class="s2">"Question...?"</span><span class="p">,</span>
+    <span class="s2">"Vigilante Sh*t"</span><span class="p">,</span>
+    <span class="s2">"Bejeweled"</span><span class="p">,</span>
+    <span class="s2">"Labyrinth"</span><span class="p">,</span>
+     <span class="s2">"Karma"</span><span class="p">,</span>
+    <span class="s2">"Sweet Nothing"</span><span class="p">,</span>
+    <span class="s2">"Mastermind"</span><span class="p">,</span>
+    <span class="s2">"The Great War"</span><span class="p">,</span>
+    <span class="s2">"Bigger Than The Whole Sky"</span><span class="p">,</span>
+    <span class="s2">"Paris"</span><span class="p">,</span>
+    <span class="s2">"High Infidelity"</span><span class="p">,</span>
+    <span class="s2">"Glitch"</span><span class="p">,</span>
+    <span class="s2">"Would've, Could've, Should've"</span><span class="p">,</span>
+    <span class="s2">"Dear Reader"</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">newlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">midnights</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">newlist</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['Maroon', 'Anti-Hero', 'Bejeweled', 'Labyrinth', 'Karma', 'Paris', 'Glitch']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tracks_with_t</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">midnights</span> <span class="k">if</span> <span class="s2">"t"</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tracks_with_t</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['Anti-Hero', 'Snow on the Beach', 'Midnight Rain', 'Question...?', 'Vigilante Sh*t', 'Labyrinth', 'Sweet Nothing', 'Mastermind', 'The Great War', 'High Infidelity', 'Glitch']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">uppercase</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">midnights</span><span class="p">]</span>   <span class="c1">#make a new list with all uppercase </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uppercase</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['LAVENDER HAZE', 'MAROON', 'ANTI-HERO', 'SNOW ON THE BEACH', "YOU'RE ON YOUR OWN KIDS", 'MIDNIGHT RAIN', 'QUESTION...?', 'VIGILANTE SH*T', 'BEJEWELED', 'LABYRINTH', 'KARMA', 'SWEET NOTHING', 'MASTERMIND', 'THE GREAT WAR', 'BIGGER THAN THE WHOLE SKY', 'PARIS', 'HIGH INFIDELITY', 'GLITCH', "WOULD'VE, COULD'VE, SHOULD'VE", 'DEAR READER']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lowercase</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">uppercase</span><span class="p">]</span>   <span class="c1">#make a new list with all uppercase </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lowercase</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['lavender haze', 'maroon', 'anti-hero', 'snow on the beach', "you're on your own kids", 'midnight rain', 'question...?', 'vigilante sh*t', 'bejeweled', 'labyrinth', 'karma', 'sweet nothing', 'mastermind', 'the great war', 'bigger than the whole sky', 'paris', 'high infidelity', 'glitch', "would've, could've, should've", 'dear reader']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">tuple_list</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">midnights</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">num</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tuple_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[('Lavender Haze', 1), ('Lavender Haze', 2), ('Lavender Haze', 3), ('Maroon', 1), ('Maroon', 2), ('Maroon', 3), ('Anti-Hero', 1), ('Anti-Hero', 2), ('Anti-Hero', 3), ('Snow on the Beach', 1), ('Snow on the Beach', 2), ('Snow on the Beach', 3), ("You're on Your Own Kids", 1), ("You're on Your Own Kids", 2), ("You're on Your Own Kids", 3), ('Midnight Rain', 1), ('Midnight Rain', 2), ('Midnight Rain', 3), ('Question...?', 1), ('Question...?', 2), ('Question...?', 3), ('Vigilante Sh*t', 1), ('Vigilante Sh*t', 2), ('Vigilante Sh*t', 3), ('Bejeweled', 1), ('Bejeweled', 2), ('Bejeweled', 3), ('Labyrinth', 1), ('Labyrinth', 2), ('Labyrinth', 3), ('Karma', 1), ('Karma', 2), ('Karma', 3), ('Sweet Nothing', 1), ('Sweet Nothing', 2), ('Sweet Nothing', 3), ('Mastermind', 1), ('Mastermind', 2), ('Mastermind', 3), ('The Great War', 1), ('The Great War', 2), ('The Great War', 3), ('Bigger Than The Whole Sky', 1), ('Bigger Than The Whole Sky', 2), ('Bigger Than The Whole Sky', 3), ('Paris', 1), ('Paris', 2), ('Paris', 3), ('High Infidelity', 1), ('High Infidelity', 2), ('High Infidelity', 3), ('Glitch', 1), ('Glitch', 2), ('Glitch', 3), ("Would've, Could've, Should've", 1), ("Would've, Could've, Should've", 2), ("Would've, Could've, Should've", 3), ('Dear Reader', 1), ('Dear Reader', 2), ('Dear Reader', 3)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
