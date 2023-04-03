@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      10 min read
     
 </span></p>
 
@@ -564,25 +564,189 @@ Track 19: All Of The Girls You Loved Before
 </h2>
 <ul>
 <li>What are the pro and cons of using this data structure? </li>
-<li>
-<p>Dictionary vs List</p>
-<p><img src="images/list.png" alt="Lists"></p>
-<p><img src="images/dictionaries.png" alt="Dictionaries"></p>
-</li>
-</ul>
-<ul>
-<li>Expand upon the code given to you, possible improvements in comments</li>
-<li>
-<p>Build your own album showing features of a python dictionary</p>
-</li>
-<li>
-<p>For Mr. Yeung's class: Justify your favorite Taylor Swift song, answer may effect seed</p>
-</li>
+<li>Dictionary vs List   </li>
 </ul>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/list.png" alt="Lists"></p>
+<p><img src="images/dictionaries.png" alt="Dictionaries"></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">midnights_album</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Midnight 3 am"</span><span class="p">,</span>
+    <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Taylor Swift"</span><span class="p">,</span>
+    <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2022</span><span class="p">,</span>
+    <span class="s2">"genre"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Pop"</span><span class="p">,</span> <span class="s2">"Synth-pop"</span><span class="p">,</span> <span class="s2">"Alternative/Indie"</span><span class="p">],</span>
+    <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">"Lavender Haze"</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">"Maroon"</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">"Anti-Hero"</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">"Snow on the Beach"</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">"You're on Your Own Kids"</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">"Midnight Rain"</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">"Question...?"</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">"Vigilante Sh*t"</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">"Bejeweled"</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">"Labyrinth"</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">"Karma"</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s2">"Sweet Nothing"</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s2">"Mastermind"</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s2">"The Great War"</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="s2">"Bigger Than The Whole Sky"</span><span class="p">,</span>
+        <span class="mi">16</span><span class="p">:</span> <span class="s2">"Paris"</span><span class="p">,</span>
+        <span class="mi">17</span><span class="p">:</span> <span class="s2">"High Infidelity"</span><span class="p">,</span>
+        <span class="mi">18</span><span class="p">:</span> <span class="s2">"Glitch"</span><span class="p">,</span>
+        <span class="mi">19</span><span class="p">:</span> <span class="s2">"Would've, Could've, Should've"</span><span class="p">,</span>
+        <span class="mi">20</span><span class="p">:</span> <span class="s2">"Dear Reader"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">midnights_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'tracks'</span><span class="p">))</span>
+<span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">midnights_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: 'Lavender Haze', 2: 'Maroon', 3: 'Anti-Hero', 4: 'Snow on the Beach', 5: "You're on Your Own Kids", 6: 'Midnight Rain', 7: 'Question...?', 8: 'Vigilante Sh*t', 9: 'Bejeweled', 10: 'Labyrinth', 11: 'Karma', 12: 'Sweet Nothing', 13: 'Mastermind', 14: 'The Great War', 15: 'Bigger Than The Whole Sky', 16: 'Paris', 17: 'High Infidelity', 18: 'Glitch', 19: "Would've, Could've, Should've", 20: 'Dear Reader'}
+{1: 'Lavender Haze', 2: 'Maroon', 3: 'Anti-Hero', 4: 'Snow on the Beach', 5: "You're on Your Own Kids", 6: 'Midnight Rain', 7: 'Question...?', 8: 'Vigilante Sh*t', 9: 'Bejeweled', 10: 'Labyrinth', 11: 'Karma', 12: 'Sweet Nothing', 13: 'Mastermind', 14: 'The Great War', 15: 'Bigger Than The Whole Sky', 16: 'Paris', 17: 'High Infidelity', 18: 'Glitch', 19: "Would've, Could've, Should've", 20: 'Dear Reader'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">midnights_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>title: Midnight 3 am
+artist: Taylor Swift
+year: 2022
+genre: ['Pop', 'Synth-pop', 'Alternative/Indie']
+tracks: {1: 'Lavender Haze', 2: 'Maroon', 3: 'Anti-Hero', 4: 'Snow on the Beach', 5: "You're on Your Own Kids", 6: 'Midnight Rain', 7: 'Question...?', 8: 'Vigilante Sh*t', 9: 'Bejeweled', 10: 'Labyrinth', 11: 'Karma', 12: 'Sweet Nothing', 13: 'Mastermind', 14: 'The Great War', 15: 'Bigger Than The Whole Sky', 16: 'Paris', 17: 'High Infidelity', 18: 'Glitch', 19: "Would've, Could've, Should've", 20: 'Dear Reader'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tracks_dict</span> <span class="o">=</span> <span class="n">midnights_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span>
+<span class="n">track</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">song</span> <span class="ow">in</span> <span class="n">tracks_dict</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Track "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">track</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">song</span><span class="p">))</span>
+    <span class="n">track</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Track 1: Lavender Haze
+Track 2: Maroon
+Track 3: Anti-Hero
+Track 4: Snow on the Beach
+Track 5: You're on Your Own Kids
+Track 6: Midnight Rain
+Track 7: Question...?
+Track 8: Vigilante Sh*t
+Track 9: Bejeweled
+Track 10: Labyrinth
+Track 11: Karma
+Track 12: Sweet Nothing
+Track 13: Mastermind
+Track 14: The Great War
+Track 15: Bigger Than The Whole Sky
+Track 16: Paris
+Track 17: High Infidelity
+Track 18: Glitch
+Track 19: Would've, Could've, Should've
+Track 20: Dear Reader
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
