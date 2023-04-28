@@ -2,7 +2,7 @@
 keywords: fastai
 title: DevOps Lesson
 toc: true
-categories: []
+categories: [trimester 3]
 type: pbl
 nb_path: _notebooks/2023-04-26-devops-lesson.ipynb
 layout: notebook
@@ -37,6 +37,20 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>142.250.217.238
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -56,6 +70,20 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Successfully connected!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -63,8 +91,16 @@ layout: notebook
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Check-In">Check-In<a class="anchor-link" href="#Check-In"> </a></h2><ol>
 <li>What is an IP address?</li>
+</ol>
+<ul>
+<li>An IP address is a unique set of numbers that helps to identify a device on a computer network. It is useful in allowing computers to communicate with each other and send information. The IP address is used to make sure data gets to the right place on a network.</li>
+</ul>
+<ol>
 <li>What is a TCP port?</li>
 </ol>
+<ul>
+<li>Transmission Control Protocol port is used for communication that allowed networked devices to establish a connection and exchange data. TCP and IP are used together to enable communication between devices. TCP generates a specific port number and destination port number, allowing for data to be transferred.</li>
+</ul>
 
 </div>
 </div>
@@ -88,6 +124,38 @@ layout: notebook
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>HTTP/1.1 200 OK
+Date: Fri, 28 Apr 2023 00:04:00 GMT
+Expires: -1
+Cache-Control: private, max-age=0
+Content-Type: text/html; charset=ISO-8859-1
+Content-Security-Policy-Report-Only: object-src &#39;none&#39;;base-uri &#39;self&#39;;script-src &#39;nonce-9BqxLCDVMTxKrwoM0hxbLw&#39; &#39;strict-dynamic&#39; &#39;report-sample&#39; &#39;unsafe-eval&#39; &#39;unsafe-inline&#39; https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+P3P: CP=&#34;This is not a P3P policy! See g.co/p3phelp for more info.&#34;
+Server: gws
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: 1P_JAR=2023-04-28-00; expires=Sun, 28-May-2023 00:04:00 GMT; path=/; domain=.google.com; Secure
+Set-Cookie: AEC=AUEFqZdUPOlyrlIrdWUAuE7oWWGEWtJ_zxcOwBbjsROFAVUYpdI-FpiRFQ; expires=Wed, 25-Oct-2023 00:04:00 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax
+Set-Cookie: NID=511=acq-JwHyEnI0aUp9UGbVmAImrOXpgonQ4PRjPBMn-4qbHaNzNFdaumD0I2-EOLDi8oHNl8egdjo6W47NN7AN8n158kgsqFuDRgK6GKqep3eFN-GcedMGIL1DKd9kteYflKV1l9AZ2mgSe1cx4tQL55gfK2kV-6ND2L6C1jB7y20; expires=Sat, 28-Oct-2023 00:04:00 GMT; path=/; domain=.google.com; HttpOnly
+Accept-Ranges: none
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+
+586e
+&lt;!doctype html&gt;&lt;html itemscope=&#34;&#34; itemtype=&#34;http://schema.org/WebPage&#34; lang=&#34;en&#34;&gt;&lt;head&gt;&lt;meta content=&#34;Search the world&#39;s information, including webpages, images, videos and more. Google has many special features to help you find exactly what you&#39;re looking for.&#34; name=&#34;description&#34;&gt;&lt;meta content=&#34;noodp&#34; name=&#34;robots&#34;&gt;&lt;meta content=&#34;text/html; charset=UTF-8&#34; http-equiv=&#34;Content-Type&#34;&gt;&lt;meta content=&#34;/images/branding/googleg/1x/googleg_standard_color_128dp.png&#34; itemprop=&#34;image&#34;&gt;&lt;title&gt;Google&lt;/title&gt;&lt;script nonce=&#34;9BqxLCDVMTxKrwoM0hxbLw&#34;&gt;(function(){window.google={kEI:&#39;cA1LZLOeE4GlgQaMjr-wAQ&#39;,kEXPI:&#39;0,1359409,6058,207,4804,2316,383,246,5,1129120,1197759,380732,16114,28684,22431,1361,12311,2824,14764,4998,13227,3848,6884,31560,2872,2891,3926,7828,606,30668,30021,2615,12710,432,3,346,1244,1,16916,2652,4,1528,2304,29062,13065,11443,2215,2980,1457,16786,5824,2533,4094,7596,1,11943,30211
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -118,6 +186,22 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Status code: 200
+Headers: {&#39;Date&#39;: &#39;Fri, 28 Apr 2023 00:04:08 GMT&#39;, &#39;Expires&#39;: &#39;-1&#39;, &#39;Cache-Control&#39;: &#39;private, max-age=0&#39;, &#39;Content-Type&#39;: &#39;text/html; charset=ISO-8859-1&#39;, &#39;Content-Security-Policy-Report-Only&#39;: &#34;object-src &#39;none&#39;;base-uri &#39;self&#39;;script-src &#39;nonce-cW2zI1LSvqKqsZD6VIghig&#39; &#39;strict-dynamic&#39; &#39;report-sample&#39; &#39;unsafe-eval&#39; &#39;unsafe-inline&#39; https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp&#34;, &#39;P3P&#39;: &#39;CP=&#34;This is not a P3P policy! See g.co/p3phelp for more info.&#34;&#39;, &#39;Content-Encoding&#39;: &#39;gzip&#39;, &#39;Server&#39;: &#39;gws&#39;, &#39;X-XSS-Protection&#39;: &#39;0&#39;, &#39;X-Frame-Options&#39;: &#39;SAMEORIGIN&#39;, &#39;Set-Cookie&#39;: &#39;1P_JAR=2023-04-28-00; expires=Sun, 28-May-2023 00:04:08 GMT; path=/; domain=.google.com; Secure, AEC=AUEFqZcsrmkj0IR_ojsHYKoZMDlkwYZ7arzcqWSF4Bi8zv33Y8XMbdFFTw; expires=Wed, 25-Oct-2023 00:04:08 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=511=HlN0sq4DnEPGeGXTqumleYuUSobUHKsVVxgsqjY0JiypELzIt8TCeIzRL64-9Ro8ctu7vWKCfrHDqxZMiGycAHULN3-VgplMilByWOCqwD91Wk-FzlIXYDECI4T-EqrUhQfEkWKZwV6C4ZGtXmVWbnR8mTXSEkkxCIX5yIv3fBA; expires=Sat, 28-Oct-2023 00:04:08 GMT; path=/; domain=.google.com; HttpOnly&#39;, &#39;Alt-Svc&#39;: &#39;h3=&#34;:443&#34;; ma=2592000,h3-29=&#34;:443&#34;; ma=2592000&#39;, &#39;Transfer-Encoding&#39;: &#39;chunked&#39;}
+Response text: &lt;!doctype html&gt;&lt;html itemscope=&#34;&#34; itemtype=&#34;http://schema.org/WebPage&#34; lang=&#34;en&#34;&gt;&lt;head&gt;&lt;meta content
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -141,6 +225,31 @@ layout: notebook
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Cool site&lt;/title&gt;
+&lt;meta name=&#34;description&#34; content=&#34;cool site for apcsp&#34;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Hello, this is my cool site. Check out my products:
+&lt;a href=&#34;/products&#34;&gt;Products!!&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -182,8 +291,28 @@ layout: notebook
 </pre></div>
 <h2 id="Check-In">Check In<a class="anchor-link" href="#Check-In"> </a></h2><ol>
 <li>Research 1 HTTP header and describe, in detail, its purpose.</li>
+</ol>
+<ul>
+<li>HTTP header is used to identify the client application that is making the HTTP request. The purpose is to provide information to the server about the client application so that the server can provide a response.</li>
+</ul>
+<ol>
 <li>Write a line in a sample NGINX configuration that will add that specific header to the <code>/information</code> location</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">add_header</span> <span class="s">X-Cool-Header</span> <span class="s">&quot;Grace</span> <span class="s">Wang&quot;</span><span class="p">;</span>
+
+    <span class="kn">location</span> <span class="s">/information</span> <span class="p">{</span>
+        <span class="kn">add_header</span> <span class="s">X-Cooler-Header</span> <span class="s">&quot;A</span> <span class="s">super</span> <span class="s">specific</span> <span class="s">header&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<ol>
 <li>Explain the purpose of the load balancing performed by NGINX</li>
+</ol>
+<ul>
+<li>The load balancing feature in NGINX distributes incoming requests evenly across multiple servers in order to not overwhelm a single server. This helps improve the performance and reliability of the website. </li>
+</ul>
+<ol>
 <li>Modify the following code block to obtain the value of the secret header on <code>/products</code> of the AWS site</li>
 </ol>
 
@@ -208,6 +337,20 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The secret header is: ...
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -226,18 +369,65 @@ layout: notebook
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="CORS-Hacks">CORS Hacks<a class="anchor-link" href="#CORS-Hacks"> </a></h1><ol>
 <li>Explain what CORS is and what it stands for</li>
+</ol>
+<ul>
+<li>CORS stands for cross-origin security</li>
+<li>It is a set of techniques that prevents web pages frm accessing resources on other domains without permissions and keeps your website safe</li>
+</ul>
+<ol>
 <li>Describe how you would be able to implement CORS into your own websites</li>
+</ol>
+<ul>
+<li>when creating function read options for api on the CPT project, I used mode CORS. This was done in the javascript brackets when defining a functon for read options.</li>
+</ul>
+<ol>
 <li>Describe why you would want to implement CORS into your own websites</li>
+</ol>
+<ul>
+<li>CORS protects users from bad websites that can steal your data. Building websites that makes requirests to a different domain will need CORS in order to allow the web browser to make the requests because without CORS the web browser may block the requests and your website would not be able to obtain the data.</li>
+</ul>
+<ol>
 <li>How could use CORS to benefit yourself in the future?</li>
 </ol>
+<ul>
+<li>I will implement CORS in the future websites that I build in order to improve user experience and make sure user data is not stolen. </li>
+</ul>
 <p>Total: 0.2 points</p>
 <h1 id="KASM-Hacks">KASM Hacks<a class="anchor-link" href="#KASM-Hacks"> </a></h1><ol>
 <li>What is the purpose of "sudo" when running commands in terminal?</li>
+</ol>
+<ul>
+<li>the purpose of adding sudo is to be able to runt he command with administrative privileges. Sudo bypasses levels of access and permissions in order to be able to run any code on the system.</li>
+</ul>
+<ol>
 <li>What are some commands which allow us to look at how the storage of a machine is set up as?</li>
+</ol>
+<ul>
+<li><p>Disk Utility: This is a built-in tool that allows you to view and manage disks, volumes, and partitions on your Mac. You can access it by searching for "Disk Utility" in Spotlight or navigating to "Applications" &gt; "Utilities" &gt; "Disk Utility".</p>
+</li>
+<li><p>Terminal: You can use the "diskutil" command-line utility to view information about disks and partitions. Open the Terminal and type "diskutil list" to see a list of all the disks and partitions on your system.</p>
+</li>
+</ul>
+<ol>
 <li>What do you think are some alternatives to running "curl -O" to get the zip file for KASM?</li>
+</ol>
+<ul>
+<li>Use a web browser: You can also download the KASM zip file using a web browser. Simply navigate to the KASM website, locate the download link for the zip file, and download it using your browser's download feature.</li>
+</ul>
+<ol>
 <li>What kind of commands do you think the "install.sh" command has and why is it necessary to call it?</li>
+</ol>
+<ul>
+<li>Checking for dependencies</li>
+<li>Creating directories</li>
+<li>Setting permissions</li>
+</ul>
+<ol>
 <li>Explain in at least 3-4 sentences how deploying KASM is related to/requires other topics talked about in the lesson and/or potential ways to add things mentioned in the lesson to this guide.</li>
 </ol>
+<ul>
+<li>Deploying KASM requires knowledge of several related topics, such as security, application isolation, and remote access. KASM provides a secure and isolated environment for running applications, which requires understanding of security concepts and best practices. Additionally, KASM can be accessed remotely, which requires knowledge of remote access tools and protocols.</li>
+</ul>
 <p>Total: 0.2 points</p>
 <h1 id="AWS/RDS-Hacks">AWS/RDS Hacks<a class="anchor-link" href="#AWS/RDS-Hacks"> </a></h1><p>See the <a href="https://firestorm0986.github.io/SLAAT/posts/sqlite-aws/">setup post</a></p>
 <ul>
