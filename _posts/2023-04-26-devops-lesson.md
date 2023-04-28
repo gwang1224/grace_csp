@@ -331,6 +331,7 @@ Hello, this is my cool site. Check out my products:
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span> <span class="o">+</span> <span class="n">aws</span><span class="o">+</span> <span class="s2">&quot;/products&quot;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The secret header is:&quot;</span><span class="p">,</span> <span class="s2">&quot;...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -344,6 +345,7 @@ Hello, this is my cool site. Check out my products:
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The secret header is: ...
+{&#39;Server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;Date&#39;: &#39;Fri, 28 Apr 2023 04:10:47 GMT&#39;, &#39;Content-Type&#39;: &#39;text/html&#39;, &#39;Transfer-Encoding&#39;: &#39;chunked&#39;, &#39;Connection&#39;: &#39;keep-alive&#39;, &#39;Last-Modified&#39;: &#39;Thu, 20 Apr 2023 20:42:12 GMT&#39;, &#39;X-Cooler-Header&#39;: &#39;This is my secret header!&#39;, &#39;Content-Encoding&#39;: &#39;gzip&#39;}
 </pre>
 </div>
 </div>
@@ -361,6 +363,36 @@ Hello, this is my cool site. Check out my products:
 <li>Complete the above code-segment to retrieve the secret header (0.1)</li>
 </ul>
 <h2 id="Bonus-(0.05)">Bonus (0.05)<a class="anchor-link" href="#Bonus-(0.05)"> </a></h2><p>Create a diagram showing the layers of abstraction that allow us to use HTTP (IP, TCP, etc.)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Slides-Questions">Slides Questions<a class="anchor-link" href="#Slides-Questions"> </a></h1><ol>
+<li>What does DNS stand for? </li>
+</ol>
+<ul>
+<li>Domain Name System</li>
+</ul>
+<ol>
+<li>What is the purpose of DNS? </li>
+</ol>
+<ul>
+<li>DNS serves as a phone book of the internet, mapping human-readable domain names to IP addresses. It enables users to access websites and services without needing to remember the numerical IP address of each website. Additionally, DNS helps to distribute web traffic across different servers and locations, improving website speed and reliability.</li>
+</ul>
+<ol>
+<li>How does DNS work? </li>
+</ol>
+<ul>
+<li>When a user types a domain name into their web browser, the browser sends a request to a DNS server to look up the IP address associated with that domain name. The DNS server then responds with the corresponding IP address, allowing the browser to establish a connection and load the requested website.</li>
+</ul>
+<ol>
+<li>What is a DNS resolver?</li>
+</ol>
+<ul>
+<li>A DNS resolver is a computer program or a server that translates domain names into IP addresses, allowing devices to communicate with each other on the internet. It receives requests from client devices and uses the DNS protocol to look up and retrieve the IP address associated with the requested domain name.</li>
+</ul>
 
 </div>
 </div>
