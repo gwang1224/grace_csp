@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -157,6 +157,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Bonus-(0.05)">Bonus (0.05) </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#Slides-Questions">Slides Questions </a></li>
 <li class="toc-entry toc-h1"><a href="#CORS-Hacks">CORS Hacks </a></li>
 <li class="toc-entry toc-h1"><a href="#KASM-Hacks">KASM Hacks </a></li>
 <li class="toc-entry toc-h1"><a href="#AWS/RDS-Hacks">AWS/RDS Hacks </a></li>
@@ -503,6 +504,7 @@ Hello, this is my cool site. Check out my products:
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://"</span> <span class="o">+</span> <span class="n">aws</span><span class="o">+</span> <span class="s2">"/products"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"The secret header is:"</span><span class="p">,</span> <span class="s2">"..."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -516,6 +518,7 @@ Hello, this is my cool site. Check out my products:
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The secret header is: ...
+{'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Fri, 28 Apr 2023 04:10:47 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Last-Modified': 'Thu, 20 Apr 2023 20:42:12 GMT', 'X-Cooler-Header': 'This is my secret header!', 'Content-Encoding': 'gzip'}
 </pre>
 </div>
 </div>
@@ -540,6 +543,40 @@ Hello, this is my cool site. Check out my products:
 <a class="anchor" href="#Bonus-(0.05)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bonus (0.05)<a class="anchor-link" href="#Bonus-(0.05)"> </a>
 </h2>
 <p>Create a diagram showing the layers of abstraction that allow us to use HTTP (IP, TCP, etc.)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Slides-Questions">
+<a class="anchor" href="#Slides-Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Slides Questions<a class="anchor-link" href="#Slides-Questions"> </a>
+</h1>
+<ol>
+<li>What does DNS stand for? </li>
+</ol>
+<ul>
+<li>Domain Name System</li>
+</ul>
+<ol>
+<li>What is the purpose of DNS? </li>
+</ol>
+<ul>
+<li>DNS serves as a phone book of the internet, mapping human-readable domain names to IP addresses. It enables users to access websites and services without needing to remember the numerical IP address of each website. Additionally, DNS helps to distribute web traffic across different servers and locations, improving website speed and reliability.</li>
+</ul>
+<ol>
+<li>How does DNS work? </li>
+</ol>
+<ul>
+<li>When a user types a domain name into their web browser, the browser sends a request to a DNS server to look up the IP address associated with that domain name. The DNS server then responds with the corresponding IP address, allowing the browser to establish a connection and load the requested website.</li>
+</ul>
+<ol>
+<li>What is a DNS resolver?</li>
+</ol>
+<ul>
+<li>A DNS resolver is a computer program or a server that translates domain names into IP addresses, allowing devices to communicate with each other on the internet. It receives requests from client devices and uses the DNS protocol to look up and retrieve the IP address associated with the requested domain name.</li>
+</ul>
 
 </div>
 </div>
