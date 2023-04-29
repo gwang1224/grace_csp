@@ -95,6 +95,10 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 ![Internet](https://cdn.discordapp.com/attachments/1068416415251570689/1101987034983321671/Screenshot_2023-04-29_at_2.42.58_PM.png)
 
+Important Reference
+
+![Ref](https://cdn.discordapp.com/attachments/1068416415251570689/1101987864889278494/Screenshot_2023-04-29_at_2.46.17_PM.png)
+
 ![Full Stack]({{site.baseurl}}/images/fullstack.png)
 
 
@@ -129,9 +133,19 @@ The "network" layer is responsible for ***routing data packets between networks*
 
 - Complete the network activity, summarize your understanding of fault tolerance.
 
-![Full Stack]({{site.baseurl}}/images/fullstack.png)
+![Full Stack](https://cdn.discordapp.com/attachments/1068416415251570689/1101987386591817878/Screenshot_2023-04-29_at_2.44.20_PM.png)
 
-![Full Stack]({{site.baseurl}}/images/fullstack.png)
+- Slow
+- fewer resources
+- if one path goes down, failure causes major problem
+
+
+![Full Stack](https://cdn.discordapp.com/attachments/1068416415251570689/1101987430397124668/Screenshot_2023-04-29_at_2.44.34_PM.png)
+
+- each device can communicate directly w/ each other, faster
+- nots of resources
+- fault tolerant
+- redundancy is important
 
 
 ### Parallel and Distributed Computing
@@ -139,7 +153,11 @@ The "network" layer is responsible for ***routing data packets between networks*
 
 - What is naturally Distributed in Frontend/Backend archeticture?  
 
+    - Backend often comprises of several servers, each handling a variety of duties or services, means that it is inherently spread. The backend can be distributed so that the application can handle a lot of requests, increase performance and reliability, and offer fault tolerance and high availability. The user interface is shown and communication with the user takes place in the frontend, which is generally run on a single client device like a web browser or mobile app.
+
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
+
+    - The command is used to configure the Gunicorn web server. Workers specifies thenumber of worker processes that would be created to handle incoming requests. The Gunicorn will bind to port 8086.
 
 
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
