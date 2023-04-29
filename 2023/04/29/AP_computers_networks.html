@@ -228,6 +228,10 @@ window.onload = wrap_img;
 
 <p><img src="https://cdn.discordapp.com/attachments/1068416415251570689/1101987034983321671/Screenshot_2023-04-29_at_2.42.58_PM.png" alt="Internet"></p>
 
+<p>Important Reference</p>
+
+<p><img src="https://cdn.discordapp.com/attachments/1068416415251570689/1101987864889278494/Screenshot_2023-04-29_at_2.46.17_PM.png" alt="Ref"></p>
+
 <p><img src="/repository_1/images/fullstack.png" alt="Full Stack"></p>
 
 <ul>
@@ -266,9 +270,22 @@ window.onload = wrap_img;
   <li>Complete the network activity, summarize your understanding of fault tolerance.</li>
 </ul>
 
-<p><img src="/repository_1/images/fullstack.png" alt="Full Stack"></p>
+<p><img src="https://cdn.discordapp.com/attachments/1068416415251570689/1101987386591817878/Screenshot_2023-04-29_at_2.44.20_PM.png" alt="Full Stack"></p>
 
-<p><img src="/repository_1/images/fullstack.png" alt="Full Stack"></p>
+<ul>
+  <li>Slow</li>
+  <li>fewer resources</li>
+  <li>if one path goes down, failure causes major problem</li>
+</ul>
+
+<p><img src="https://cdn.discordapp.com/attachments/1068416415251570689/1101987430397124668/Screenshot_2023-04-29_at_2.44.34_PM.png" alt="Full Stack"></p>
+
+<ul>
+  <li>each device can communicate directly w/ each other, faster</li>
+  <li>nots of resources</li>
+  <li>fault tolerant</li>
+  <li>redundancy is important</li>
+</ul>
 
 <h3 id="parallel-and-distributed-computing">
 <a class="anchor" href="#parallel-and-distributed-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallel and Distributed Computing</h3>
@@ -279,9 +296,17 @@ window.onload = wrap_img;
 <ul>
   <li>
     <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
+
+    <ul>
+      <li>Backend often comprises of several servers, each handling a variety of duties or services, means that it is inherently spread. The backend can be distributed so that the application can handle a lot of requests, increase performance and reliability, and offer fault tolerance and high availability. The user interface is shown and communication with the user takes place in the frontend, which is generally run on a single client device like a web browser or mobile app.</li>
+    </ul>
   </li>
   <li>
     <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a></p>
+
+    <ul>
+      <li>The command is used to configure the Gunicorn web server. Workers specifies thenumber of worker processes that would be created to handle incoming requests. The Gunicorn will bind to port 8086.</li>
+    </ul>
   </li>
 </ul>
 
