@@ -27,7 +27,7 @@ layout: notebook
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
 
 <span class="c1"># Change the following host and see what IP it prints!</span>
-<span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;google.com&quot;</span>
+<span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;youtube.com&quot;</span>
 <span class="n">ip</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostbyname</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
@@ -43,7 +43,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>142.250.217.238
+<pre>142.250.188.238
 </pre>
 </div>
 </div>
