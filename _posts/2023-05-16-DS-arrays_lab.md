@@ -4,9 +4,6 @@ description: Several 2D arrays and Animations hacks are provided to further lear
 title: Python 2D Iteration and Animation
 toc: true
 categories: [1.D, 2.B, 3.B, C3.1]
-image: /images/monkeys.png
-type: pbl
-week: 34
 nb_path: _notebooks/2023-05-16-DS-arrays_lab.ipynb
 layout: notebook
 ---
@@ -249,10 +246,10 @@ For loop with shortcut (*) row expansion
 
 
 
-<div id="10ff83f2-1c30-4e3d-9a2b-9568ce2f8e76"></div>
+<div id="dccf8f0d-d331-42cf-894f-80ab34ff988c"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#10ff83f2-1c30-4e3d-9a2b-9568ce2f8e76');
+var element = $('#dccf8f0d-d331-42cf-894f-80ab34ff988c');
 
 /*
 * Creator: Nighthawk Coding Society
